@@ -32,7 +32,7 @@ let tp2 = Config.WORKTYPE == 'public' ? true : false
 
 	// -------------------------------------X-N-X-X--S-E-A-R-C-H------------------------------------------------------------------------
 	
-Ramiya.LUSIFARCMD({ pattern: 'getxnx ?(.*)', fromMe: tp1 , dontAddCommandList:true}, async (message, match) => {
+Ramiya.addCommand({ pattern: 'getxnx ?(.*)', fromMe: tp1 , dontAddCommandList:true}, async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,Need,MessageType.text);    
 	        await message.client.sendMessage(message.jid,Searching,MessageType.text);
@@ -56,7 +56,7 @@ Ramiya.LUSIFARCMD({ pattern: 'getxnx ?(.*)', fromMe: tp1 , dontAddCommandList:tr
 	  
     })
 	
-Ramiya.LUSIFARCMD({ pattern: 'getxnx ?(.*)', fromMe: tp2 ,dontAddCommandList:true}, async (message, match) => {
+Ramiya.addCommand({ pattern: 'getxnx ?(.*)', fromMe: tp2 ,dontAddCommandList:true}, async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,Need,MessageType.text);    
 	        await message.client.sendMessage(message.jid,Searching,MessageType.text);

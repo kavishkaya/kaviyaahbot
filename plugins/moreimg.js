@@ -12,13 +12,13 @@ const Config = require('../config');
 
 if (Config.WORKTYPE == 'private') {
 
-lusifar.LUSIFARCMD({pattern: 'moretxt', fromMe: true, desc: 'more txtit commands'}, (async (message, match) => {
+lusifar.addCommand({pattern: 'moretxt', fromMe: true, desc: 'more txtit commands'}, (async (message, match) => {
   
   await message.sendMessage('\n\n\n📱command : .break\n💎desc : change your text to wall breaking image.\n\n📱command : .phub\n💎desc : change your text into pornhub logo.\n🏷️example : .phuh BOT/X.\n\n📱command : .blood\n💎desc : change your text frozen blood on a glass\n\n📱command : .1917\n💎desc : change your text to a 1917 model image\n\n📱command : .maskman\n💎desc : change your text to mask man bg\n🏷️example : .avengers its/BOT X.\n\n📱command : .boxed\n💎desc : change your text to 3d boxed design\n\n📱command : .window\n💎desc : write your text on a foggy window \n\n📱command : .skywal\n💎desc : random sky wallpaper with given text\n\n📱command : .holo\n💎desc : change your text to holo design\n\n📱command : .drop\n💎desc : change your text into rain water drop.n\n📱command : .flame\n💎desc : text with fire effect.\n\n📱command : .vtext\n💎desc : text to video.\n\n📱command : .ptext\n💎desc : text to video.\n\n📱command : .colortext\n💎desc : text to colorfull video\n\n📱command : .cloud\n💎desc : text on cloud\n\n📱command : .2ninja\n💎desc : random ninja logo with given name.');
   
 }));
 
-lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -28,7 +28,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
 }));
   
-  lusifar.LUSIFARCMD({pattern: 'phub ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+  lusifar.addCommand({pattern: 'phub ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -45,7 +45,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
     }));
   
-   lusifar.LUSIFARCMD({pattern: 'blood ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+   lusifar.addCommand({pattern: 'blood ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -55,7 +55,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
     }));
   
-  lusifar.LUSIFARCMD({pattern: '1917 ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+  lusifar.addCommand({pattern: '1917 ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -65,7 +65,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
     }));
   
-   lusifar.LUSIFARCMD({ pattern: 'maskman?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+   lusifar.addCommand({ pattern: 'maskman?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(need);
 
@@ -76,7 +76,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
     }));
   
    
-         lusifar.LUSIFARCMD({pattern: 'boxed ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+         lusifar.addCommand({pattern: 'boxed ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -86,7 +86,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
 }));
   
-  lusifar.LUSIFARCMD({pattern: 'ffire ?(.*)', fromMe: true, dontAddCommandList: false, desc: 'add your text to random freefire logo'}, (async (message, match) => {
+  lusifar.addCommand({pattern: 'ffire ?(.*)', fromMe: true, dontAddCommandList: false, desc: 'add your text to random freefire logo'}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -96,7 +96,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
 }));
   
-  lusifar.LUSIFARCMD({pattern: 'window ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+  lusifar.addCommand({pattern: 'window ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -106,7 +106,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
     }));
   
-   lusifar.LUSIFARCMD({pattern: 'skywal ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+   lusifar.addCommand({pattern: 'skywal ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -116,7 +116,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
 }));
   
-   lusifar.LUSIFARCMD({pattern: 'holo ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+   lusifar.addCommand({pattern: 'holo ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -126,7 +126,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
     }));
 
-    lusifar.LUSIFARCMD({pattern: '2ninja ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: '2ninja ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -136,7 +136,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
    }));
   
-   lusifar.LUSIFARCMD({pattern: 'drop ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+   lusifar.addCommand({pattern: 'drop ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -145,7 +145,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: Config.AFN})
 
     }));
-   lusifar.LUSIFARCMD({pattern: 'cloud ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+   lusifar.addCommand({pattern: 'cloud ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -155,7 +155,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
     }));
 
- lusifar.LUSIFARCMD({pattern: 'emo ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+ lusifar.addCommand({pattern: 'emo ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
         
@@ -172,7 +172,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
   
     }));
 
-    lusifar.LUSIFARCMD({pattern: 'flame ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'flame ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -182,7 +182,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
     }));
 
-    lusifar.LUSIFARCMD({pattern: 'vtext ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'vtext ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -192,7 +192,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
     }));
 
-    lusifar.LUSIFARCMD({pattern: 'ptext ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'ptext ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -202,7 +202,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
     }));
 
-    lusifar.LUSIFARCMD({pattern: 'colortext ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'colortext ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -215,13 +215,13 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: true, dontAddCommandList: tr
 
 else if (Config.WORKTYPE == 'public') {
 
-lusifar.LUSIFARCMD({pattern: 'moretxt', fromMe: false, desc: 'more txtit commands'}, (async (message, match) => {
+lusifar.addCommand({pattern: 'moretxt', fromMe: false, desc: 'more txtit commands'}, (async (message, match) => {
   
   await message.sendMessage('\n\n\n📱command : .break\n💎desc : change your text to wall breaking image.\n\n📱command : .phub\n💎desc : change your text into pornhub logo.\n🏷️example : .phuh BOT/X.\n\n📱command : .blood\n💎desc : change your text frozen blood on a glass\n\n📱command : .1917\n💎desc : change your text to a 1917 model image\n\n📱command : .avengers\n💎desc : change your text to avangers logo\n🏷️example : .avengers its/BOT X.\n\n📱command : .boxed\n💎desc : change your text to 3d boxed design\n\n📱command : .window\n💎desc : write your text on a foggy window \n\n📱command : .skywal\n💎desc : random sky wallpaper with given text\n\n📱command : .holo\n💎desc : change your text to holo design\n\n📱command : .drop\n💎desc : change your text into rain water drop.n\n📱command : .flame\n💎desc : text with fire effect.\n\n📱command : .vtext\n💎desc : text to video.\n\n📱command : .ptext\n💎desc : text to video.\n\n📱command : .colortext\n💎desc : text to colorfull video\n\n📱command : .cloud\n💎desc : text on cloud\n\n📱command : .2ninja\n💎desc : random ninja logo with given name.');
   
 }));
 
-lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -231,7 +231,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
 
 }));
   
-  lusifar.LUSIFARCMD({pattern: 'phub ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+  lusifar.addCommand({pattern: 'phub ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -248,7 +248,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
 
     }));
   
-   lusifar.LUSIFARCMD({pattern: 'blood ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+   lusifar.addCommand({pattern: 'blood ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -258,7 +258,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
 
     }));
   
-  lusifar.LUSIFARCMD({pattern: '1917 ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+  lusifar.addCommand({pattern: '1917 ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -268,7 +268,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
 
     }));
   
-   lusifar.LUSIFARCMD({ pattern: 'maskman?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
+   lusifar.addCommand({ pattern: 'maskman?(.*)', fromMe: true,dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(need);
 
@@ -279,7 +279,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
     }));
   
    
-         lusifar.LUSIFARCMD({pattern: 'boxed ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+         lusifar.addCommand({pattern: 'boxed ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -289,7 +289,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
 
 }));
   
-  lusifar.LUSIFARCMD({pattern: 'ffire ?(.*)', fromMe: false, dontAddCommandList: false, desc: 'add your text to random freefire logo'}, (async (message, match) => {
+  lusifar.addCommand({pattern: 'ffire ?(.*)', fromMe: false, dontAddCommandList: false, desc: 'add your text to random freefire logo'}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -299,7 +299,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
 
 }));
   
-  lusifar.LUSIFARCMD({pattern: 'window ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+  lusifar.addCommand({pattern: 'window ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -309,7 +309,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
 
     }));
   
-   lusifar.LUSIFARCMD({pattern: 'skywal ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+   lusifar.addCommand({pattern: 'skywal ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -319,7 +319,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
 
 }));
   
-   lusifar.LUSIFARCMD({pattern: 'holo ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+   lusifar.addCommand({pattern: 'holo ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -329,7 +329,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
 
     }));
 
-    lusifar.LUSIFARCMD({pattern: '2ninja ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: '2ninja ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD);
 
@@ -339,7 +339,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
 
    }));
   
-   lusifar.LUSIFARCMD({pattern: 'drop ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+   lusifar.addCommand({pattern: 'drop ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -348,7 +348,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: Config.AFN})
 
     }));
-   lusifar.LUSIFARCMD({pattern: 'cloud ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+   lusifar.addCommand({pattern: 'cloud ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -358,7 +358,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
 
     }));
 
- lusifar.LUSIFARCMD({pattern: 'emo ?(.*)', fromMe: false, desc: 'emogi to png'}, (async (message, match) => {
+ lusifar.addCommand({pattern: 'emo ?(.*)', fromMe: false, desc: 'emogi to png'}, (async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
         
@@ -375,7 +375,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
   
     }));
 
-    lusifar.LUSIFARCMD({pattern: 'flame ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'flame ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -385,7 +385,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
 
     }));
 
-    lusifar.LUSIFARCMD({pattern: 'vtext ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'vtext ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -395,7 +395,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
 
     }));
 
-    lusifar.LUSIFARCMD({pattern: 'ptext ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'ptext ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -405,7 +405,7 @@ lusifar.LUSIFARCMD({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: t
 
     }));
 
-    lusifar.LUSIFARCMD({pattern: 'colortext ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'colortext ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 

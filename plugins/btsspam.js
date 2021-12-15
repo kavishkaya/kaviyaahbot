@@ -13,7 +13,7 @@ const Language = require('../language');
 const Lang = Language.getString('scrapers');
 
 
-lusifar.LUSIFARCMD({pattern: 'btsabout', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'btsabout', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     var r_text = new Array ();
     

@@ -15,7 +15,7 @@ const Lang = Language.getString('greetings');
 
 if (Config.WORKTYPE == 'private') {
 
-lusifar.LUSIFARCMD({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
+lusifar.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid);
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_WELCOME,MessageType.text);
@@ -24,7 +24,7 @@ lusifar.LUSIFARCMD({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC},
     }
 }));
 
-lusifar.LUSIFARCMD({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') {
         return await message.client.sendMessage(message.jid,Lang.NEED_WELCOME_TEXT);
     } else {
@@ -34,7 +34,7 @@ lusifar.LUSIFARCMD({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: t
     }
 }));
 
-lusifar.LUSIFARCMD({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
+lusifar.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid, 'goodbye');
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_GOODBYE,MessageType.text)
@@ -43,7 +43,7 @@ lusifar.LUSIFARCMD({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC},
     }
 }));
 
-lusifar.LUSIFARCMD({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') {
         return await message.client.sendMessage(message.jid,Lang.NEED_GOODBYE_TEXT,MessageType.text);
     } else {
@@ -57,7 +57,7 @@ lusifar.LUSIFARCMD({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: t
 else if (Config.WORKTYPE == 'public') {
     
     
-lusifar.LUSIFARCMD({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
+lusifar.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid);
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_WELCOME,MessageType.text);
@@ -66,7 +66,7 @@ lusifar.LUSIFARCMD({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC},
     }
 }));
 
-lusifar.LUSIFARCMD({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') {
         return await message.client.sendMessage(message.jid,Lang.NEED_WELCOME_TEXT);
     } else {
@@ -76,7 +76,7 @@ lusifar.LUSIFARCMD({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: t
     }
 }));
 
-lusifar.LUSIFARCMD({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
+lusifar.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid, 'goodbye');
     if (hg === false) {
         await message.client.sendMessage(message.jid,Lang.NOT_SET_GOODBYE,MessageType.text)
@@ -85,7 +85,7 @@ lusifar.LUSIFARCMD({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC},
     }
 }));
 
-lusifar.LUSIFARCMD({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') {
         return await message.client.sendMessage(message.jid,Lang.NEED_GOODBYE_TEXT,MessageType.text);
     } else {
@@ -113,7 +113,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
     
-    lusifar.LUSIFARCMD({pattern: 'welcome$', fromMe: false, desc: Lang.WELCOME_DESC}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'welcome$', fromMe: false, desc: Lang.WELCOME_DESC}, (async (message, match) => {
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN ,MessageType.text ,{quoted: message.data });
     var hg = await sql.getMessage(message.jid);
@@ -124,7 +124,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     }
 }));
 
-lusifar.LUSIFARCMD({pattern: 'welcome (.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'welcome (.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN,MessageType.text ,{quoted: message.data });
     if (match[1] === '') {
@@ -136,7 +136,7 @@ lusifar.LUSIFARCMD({pattern: 'welcome (.*)', fromMe: false, dontAddCommandList: 
     }
 }));
 
-lusifar.LUSIFARCMD({pattern: 'goodbye$', fromMe: false, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
+lusifar.addCommand({pattern: 'goodbye$', fromMe: false, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN,MessageType.text ,{quoted: message.data });
     var hg = await sql.getMessage(message.jid, 'goodbye');
@@ -147,7 +147,7 @@ lusifar.LUSIFARCMD({pattern: 'goodbye$', fromMe: false, desc: Lang.GOODBYE_DESC}
     }
 }));
 
-lusifar.LUSIFARCMD({pattern: 'goodbye (.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'goodbye (.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN,MessageType.text ,{quoted: message.data });
     if (match[1] === '') {

@@ -33,7 +33,7 @@ if (Config.LANG == 'ES') desc_msg = 'Muestra herramientas de creación de textos
 if (os.userInfo().homedir !== clh.pay) return;
 let wk = Config.WORKTYPE == 'public' ? false : true
 
-lusifar.LUSIFARCMD({pattern: 'txtit$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
+lusifar.addCommand({pattern: 'txtit$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
     var t1 = ''
     var t2 = ''
     var t3 = ''
@@ -164,7 +164,7 @@ lusifar.LUSIFARCMD({pattern: 'txtit$', fromMe: wk, desc: desc_msg}, (async (mess
         command_cmd + '```.glitch``` \n' + desc_cmd + t14 + '_\n' + usage_cmd + '.glitch Lusifar/Lusifar'
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
 }));
-lusifar.LUSIFARCMD({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -183,7 +183,7 @@ lusifar.LUSIFARCMD({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -202,7 +202,7 @@ lusifar.LUSIFARCMD({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true}
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes('/')) {
         var split = match[1].split('/');
@@ -230,7 +230,7 @@ lusifar.LUSIFARCMD({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCommandList: true}
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/create-a-futuristic-technology-neon-light-text-effect-1006.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -249,7 +249,7 @@ lusifar.LUSIFARCMD({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true}
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: '2neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: '2neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/neon-text-effect-online-879.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -268,7 +268,7 @@ lusifar.LUSIFARCMD({pattern: '2neon ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/thunder-text-effect-online-881.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -287,7 +287,7 @@ lusifar.LUSIFARCMD({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/create-logo-joker-online-934.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -306,7 +306,7 @@ lusifar.LUSIFARCMD({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes('/')) {
         var split = match[1].split('/');
@@ -334,7 +334,7 @@ lusifar.LUSIFARCMD({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/advanced-glow-text-effect-873.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -353,7 +353,7 @@ lusifar.LUSIFARCMD({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCommandList: tr
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/bokeh-text-effect-876.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -372,7 +372,7 @@ lusifar.LUSIFARCMD({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes('/')) {
         var split = match[1].split('/');
@@ -400,7 +400,7 @@ lusifar.LUSIFARCMD({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: tru
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes('/')) {
         var split = match[1].split('/');
@@ -428,7 +428,7 @@ lusifar.LUSIFARCMD({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: tr
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes('/')) {
         var split = match[1].split('/');
@@ -456,7 +456,7 @@ lusifar.LUSIFARCMD({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: t
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes('/')) {
         var split = match[1].split('/');
@@ -484,7 +484,7 @@ lusifar.LUSIFARCMD({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: tru
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes('/')) {
         var split = match[1].split('/');
@@ -512,7 +512,7 @@ lusifar.LUSIFARCMD({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes('/')) {
         var split = match[1].split('/');
@@ -540,7 +540,7 @@ lusifar.LUSIFARCMD({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes('/')) {
         var split = match[1].split('/');
@@ -568,7 +568,7 @@ lusifar.LUSIFARCMD({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true}
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/neon-text-effect-online-963.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -587,7 +587,7 @@ lusifar.LUSIFARCMD({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/ice-cold-text-effect-862.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -606,7 +606,7 @@ lusifar.LUSIFARCMD({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes('/')) {
         var split = match[1].split('/');
@@ -634,7 +634,7 @@ lusifar.LUSIFARCMD({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.photooxy("https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -653,7 +653,7 @@ lusifar.LUSIFARCMD({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'glow ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'glow ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var download = async(uri, filename, callback) => {
         await request.head(uri, async(err, res, body) => {    
             await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -664,7 +664,7 @@ lusifar.LUSIFARCMD({pattern: 'glow ?(.*)', fromMe: wk, dontAddCommandList: true}
         await message.client.sendMessage(message.jid,fs.readFileSync('/root/Lusifarwhatsappbot/glowttp.jpg'), MessageType.image, { caption: Config.AFN })
     })
 }));
-lusifar.LUSIFARCMD({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -683,7 +683,7 @@ lusifar.LUSIFARCMD({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'harry ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'harry ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -702,7 +702,7 @@ lusifar.LUSIFARCMD({pattern: 'harry ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: '4neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: '4neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -721,7 +721,7 @@ lusifar.LUSIFARCMD({pattern: '4neon ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -740,7 +740,7 @@ lusifar.LUSIFARCMD({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: t
           } 
     });
 }));
-lusifar.LUSIFARCMD({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html",
         `${match[1]}`
         ).then(async (data) => { 

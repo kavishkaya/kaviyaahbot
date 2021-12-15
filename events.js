@@ -6,7 +6,7 @@ PINKY V2
 var config = require('./config');
 var Commands = [];
 
-function LUSIFARCMD(info, func) {
+function addCommand(info, func) {
     // Basit bir fonksiyon, komut eklemek için.
     var types = ['photo', 'image', 'text', 'message'];
 
@@ -41,6 +41,6 @@ function LUSIFARCMD(info, func) {
 }
 
 module.exports = {
-    LUSIFARCMD: LUSIFARCMD,
+    addCommand: addCommand,
     commands: Commands
 }

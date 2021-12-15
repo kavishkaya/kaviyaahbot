@@ -16,7 +16,7 @@ const lusifarv = fs.readFileSync('./uploads/voicenew/lusifarv.mp3')
 let WORKN = Config.WORKTYPE == 'public' ? false : true
 let WORKM = Config.WORKTYPE == 'public' ? true : true
 
-    lusifar.LUSIFARCMD({pattern: Config.PANEL_COMMAND + '(.*)', fromMe: WORKN, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: Config.PANEL_COMMAND + '(.*)', fromMe: WORKN, dontAddCommandList: true}, (async (message, match) => {
 
         var CMD_HELP = '';
         if (match[1] === '') {
@@ -123,7 +123,7 @@ let WORKM = Config.WORKTYPE == 'public' ? true : true
     }));
 
 
-    lusifar.LUSIFARCMD({pattern: 'menu ?(.*)', fromMe: WORKN, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'menu ?(.*)', fromMe: WORKN, dontAddCommandList: true}, (async (message, match) => {
 
         var CMD_HELP = '';
         if (match[1] === '') {
@@ -228,7 +228,7 @@ let WORKM = Config.WORKTYPE == 'public' ? true : true
             );
         }
     }));
-   lusifar.LUSIFARCMD({pattern: Config.PANEL_COMMAND + '(.*)', fromMe: WORKM, dontAddCommandList: true}, (async (message, match) => {
+   lusifar.addCommand({pattern: Config.PANEL_COMMAND + '(.*)', fromMe: WORKM, dontAddCommandList: true}, (async (message, match) => {
 
         var CMD_HELP = '';
         if (match[1] === '') {
@@ -335,7 +335,7 @@ let WORKM = Config.WORKTYPE == 'public' ? true : true
     }));
 
 
-    lusifar.LUSIFARCMD({pattern: 'menu ?(.*)', fromMe: WORKM, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'menu ?(.*)', fromMe: WORKM, dontAddCommandList: true}, (async (message, match) => {
 
         var CMD_HELP = '';
         if (match[1] === '') {

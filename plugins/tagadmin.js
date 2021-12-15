@@ -12,7 +12,7 @@ const Language = require('../language');
 const Lang = Language.getString('tagall');
 
 if (Config.WORKTYPE == 'private') {
-    lusifar.LUSIFARCMD({pattern: 'tagadmin$', fromMe: true, desc: Lang.TAGADMİN}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'tagadmin$', fromMe: true, desc: Lang.TAGADMİN}, (async (message, match) => {
         let grup = await message.client.groupMetadata(message.jid);
         var jids = [];
         mesaj = '';
@@ -26,7 +26,7 @@ if (Config.WORKTYPE == 'private') {
     }));
 }
 else if (Config.WORKTYPE == 'public') {
-    lusifar.LUSIFARCMD({pattern: 'tagadmin$', fromMe: false, desc: Lang.TAGADMİN}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'tagadmin$', fromMe: false, desc: Lang.TAGADMİN}, (async (message, match) => {
         let grup = await message.client.groupMetadata(message.jid);
         var jids = [];
         mesaj = '';
@@ -40,7 +40,7 @@ else if (Config.WORKTYPE == 'public') {
     }));
 }
 
-    lusifar.LUSIFARCMD({pattern: 'tagadmin$', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'tagadmin$', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
         let grup = await message.client.groupMetadata(message.jid);
         var jids = [];
         mesaj = '';

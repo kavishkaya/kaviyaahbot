@@ -230,7 +230,7 @@ const UPD = "*📤UPLOADING...*"
 
 
 //SINHALA (A)
-lusifar.LUSIFARCMD({pattern: 'osin 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'osin 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A2015}`, { responseType: 'arraybuffer' })
 
@@ -242,7 +242,7 @@ lusifar.LUSIFARCMD({pattern: 'osin 2015', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'osin 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'osin 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A2016}`, { responseType: 'arraybuffer' })
 
@@ -254,7 +254,7 @@ lusifar.LUSIFARCMD({pattern: 'osin 2016', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'osin 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'osin 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A2015}`, { responseType: 'arraybuffer' })
 
@@ -266,7 +266,7 @@ lusifar.LUSIFARCMD({pattern: 'osin 2017', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'osin 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'osin 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A2015}`, { responseType: 'arraybuffer' })
 
@@ -278,7 +278,7 @@ lusifar.LUSIFARCMD({pattern: 'osin 2018', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'osin 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'osin 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A2015}`, { responseType: 'arraybuffer' })
 
@@ -292,7 +292,7 @@ lusifar.LUSIFARCMD({pattern: 'osin 2019', fromMe: work, dontAddCommandList: true
 
 
 //science (B)
-lusifar.LUSIFARCMD({pattern: 'osci 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'osci 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.B2015}`, { responseType: 'arraybuffer' })
 
@@ -304,7 +304,7 @@ lusifar.LUSIFARCMD({pattern: 'osci 2015', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'osci 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'osci 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.B2016}`, { responseType: 'arraybuffer' })
 
@@ -316,7 +316,7 @@ lusifar.LUSIFARCMD({pattern: 'osci 2016', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'osci 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'osci 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.B2017}`, { responseType: 'arraybuffer' })
 
@@ -328,7 +328,7 @@ lusifar.LUSIFARCMD({pattern: 'osci 2017', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'osci 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'osci 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.B2018}`, { responseType: 'arraybuffer' })
 
@@ -340,7 +340,7 @@ lusifar.LUSIFARCMD({pattern: 'osci 2018', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'osci 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'osci 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.B2019}`, { responseType: 'arraybuffer' })
 
@@ -353,7 +353,7 @@ lusifar.LUSIFARCMD({pattern: 'osci 2019', fromMe: work, dontAddCommandList: true
       }));  
 
 //maths (C)     
-lusifar.LUSIFARCMD({pattern: 'omaths 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'omaths 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.C2015}`, { responseType: 'arraybuffer' })
 
@@ -365,7 +365,7 @@ lusifar.LUSIFARCMD({pattern: 'omaths 2015', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'omaths 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'omaths 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.C2016}`, { responseType: 'arraybuffer' })
 
@@ -377,7 +377,7 @@ lusifar.LUSIFARCMD({pattern: 'omaths 2016', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'omaths 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'omaths 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.C2017}`, { responseType: 'arraybuffer' })
 
@@ -389,7 +389,7 @@ lusifar.LUSIFARCMD({pattern: 'omaths 2017', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'omaths 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'omaths 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.C2018}`, { responseType: 'arraybuffer' })
 
@@ -401,7 +401,7 @@ lusifar.LUSIFARCMD({pattern: 'omaths 2018', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'omaths 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'omaths 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.C2019}`, { responseType: 'arraybuffer' })
 
@@ -415,7 +415,7 @@ lusifar.LUSIFARCMD({pattern: 'omaths 2019', fromMe: work, dontAddCommandList: tr
 
 
 //HISTORY  (D)    
-lusifar.LUSIFARCMD({pattern: 'ohis 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohis 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.D2015}`, { responseType: 'arraybuffer' })
 
@@ -427,7 +427,7 @@ lusifar.LUSIFARCMD({pattern: 'ohis 2015', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohis 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohis 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.D2016}`, { responseType: 'arraybuffer' })
 
@@ -439,7 +439,7 @@ lusifar.LUSIFARCMD({pattern: 'ohis 2016', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohis 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohis 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.D2017}`, { responseType: 'arraybuffer' })
 
@@ -451,7 +451,7 @@ lusifar.LUSIFARCMD({pattern: 'ohis 2017', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohis 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohis 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.D2018}`, { responseType: 'arraybuffer' })
 
@@ -463,7 +463,7 @@ lusifar.LUSIFARCMD({pattern: 'ohis 2018', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohis 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohis 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.D2019}`, { responseType: 'arraybuffer' })
 
@@ -476,7 +476,7 @@ lusifar.LUSIFARCMD({pattern: 'ohis 2019', fromMe: work, dontAddCommandList: true
       }));      
 
 //ENGLISH  (E)    
-lusifar.LUSIFARCMD({pattern: 'oen 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oen 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.E2015}`, { responseType: 'arraybuffer' })
 
@@ -488,7 +488,7 @@ lusifar.LUSIFARCMD({pattern: 'oen 2015', fromMe: work, dontAddCommandList: true}
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oen 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oen 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.E2016}`, { responseType: 'arraybuffer' })
 
@@ -500,7 +500,7 @@ lusifar.LUSIFARCMD({pattern: 'oen 2016', fromMe: work, dontAddCommandList: true}
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oen 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oen 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.E2017}`, { responseType: 'arraybuffer' })
 
@@ -512,7 +512,7 @@ lusifar.LUSIFARCMD({pattern: 'oen 2017', fromMe: work, dontAddCommandList: true}
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oen 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oen 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.E2018}`, { responseType: 'arraybuffer' })
 
@@ -524,7 +524,7 @@ lusifar.LUSIFARCMD({pattern: 'oen 2018', fromMe: work, dontAddCommandList: true}
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oen 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oen 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.E2019}`, { responseType: 'arraybuffer' })
 
@@ -538,7 +538,7 @@ lusifar.LUSIFARCMD({pattern: 'oen 2019', fromMe: work, dontAddCommandList: true}
 
 
 //BUDDISM  (F)    
-lusifar.LUSIFARCMD({pattern: 'obu 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'obu 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.F2015}`, { responseType: 'arraybuffer' })
 
@@ -550,7 +550,7 @@ lusifar.LUSIFARCMD({pattern: 'obu 2015', fromMe: work, dontAddCommandList: true}
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'obu 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'obu 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.F2016}`, { responseType: 'arraybuffer' })
 
@@ -562,7 +562,7 @@ lusifar.LUSIFARCMD({pattern: 'obu 2016', fromMe: work, dontAddCommandList: true}
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'obu 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'obu 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.F2017}`, { responseType: 'arraybuffer' })
 
@@ -574,7 +574,7 @@ lusifar.LUSIFARCMD({pattern: 'obu 2017', fromMe: work, dontAddCommandList: true}
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'obu 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'obu 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.F2018}`, { responseType: 'arraybuffer' })
 
@@ -586,7 +586,7 @@ lusifar.LUSIFARCMD({pattern: 'obu 2018', fromMe: work, dontAddCommandList: true}
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'obu 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'obu 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.F2019}`, { responseType: 'arraybuffer' })
 
@@ -599,7 +599,7 @@ lusifar.LUSIFARCMD({pattern: 'obu 2019', fromMe: work, dontAddCommandList: true}
       }));
 
 //TAMIL  (G)    
-lusifar.LUSIFARCMD({pattern: 'otamil 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'otamil 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.G2015}`, { responseType: 'arraybuffer' })
 
@@ -611,7 +611,7 @@ lusifar.LUSIFARCMD({pattern: 'otamil 2015', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'otamil 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'otamil 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.G2016}`, { responseType: 'arraybuffer' })
 
@@ -623,7 +623,7 @@ lusifar.LUSIFARCMD({pattern: 'otamil 2016', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'otamil 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'otamil 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.G2017}`, { responseType: 'arraybuffer' })
 
@@ -635,7 +635,7 @@ lusifar.LUSIFARCMD({pattern: 'otamil 2017', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'otamil 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'otamil 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.G2018}`, { responseType: 'arraybuffer' })
 
@@ -647,7 +647,7 @@ lusifar.LUSIFARCMD({pattern: 'otamil 2018', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'otamil 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'otamil 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.G2019}`, { responseType: 'arraybuffer' })
 
@@ -660,7 +660,7 @@ lusifar.LUSIFARCMD({pattern: 'otamil 2019', fromMe: work, dontAddCommandList: tr
       }));
 
 //MUSIC   (H)   
-lusifar.LUSIFARCMD({pattern: 'omusic 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'omusic 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.H2015}`, { responseType: 'arraybuffer' })
 
@@ -672,7 +672,7 @@ lusifar.LUSIFARCMD({pattern: 'omusic 2015', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'omusic 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'omusic 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.H2016}`, { responseType: 'arraybuffer' })
 
@@ -684,7 +684,7 @@ lusifar.LUSIFARCMD({pattern: 'omusic 2016', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'omusic 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'omusic 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.H2017}`, { responseType: 'arraybuffer' })
 
@@ -696,7 +696,7 @@ lusifar.LUSIFARCMD({pattern: 'omusic 2017', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'omusic 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'omusic 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.H2018}`, { responseType: 'arraybuffer' })
 
@@ -708,7 +708,7 @@ lusifar.LUSIFARCMD({pattern: 'omusic 2018', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'omusic 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'omusic 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.H2019}`, { responseType: 'arraybuffer' })
 
@@ -721,7 +721,7 @@ lusifar.LUSIFARCMD({pattern: 'omusic 2019', fromMe: work, dontAddCommandList: tr
       }));
 
 //DRAMA(I)
-lusifar.LUSIFARCMD({pattern: 'odrama 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'odrama 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.H2015}`, { responseType: 'arraybuffer' })
 
@@ -733,7 +733,7 @@ lusifar.LUSIFARCMD({pattern: 'odrama 2015', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'odrama 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'odrama 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.H2016}`, { responseType: 'arraybuffer' })
 
@@ -745,7 +745,7 @@ lusifar.LUSIFARCMD({pattern: 'odrama 2016', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'odrama  2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'odrama  2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.H2017}`, { responseType: 'arraybuffer' })
 
@@ -757,7 +757,7 @@ lusifar.LUSIFARCMD({pattern: 'odrama  2017', fromMe: work, dontAddCommandList: t
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'odrama  2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'odrama  2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.H2018}`, { responseType: 'arraybuffer' })
 
@@ -769,7 +769,7 @@ lusifar.LUSIFARCMD({pattern: 'odrama  2018', fromMe: work, dontAddCommandList: t
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'odrama  2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'odrama  2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.H2019}`, { responseType: 'arraybuffer' })
 
@@ -782,7 +782,7 @@ lusifar.LUSIFARCMD({pattern: 'odrama  2019', fromMe: work, dontAddCommandList: t
       }));
 
 //DANCE ORIANTAL   (J)   
-lusifar.LUSIFARCMD({pattern: 'odanceori 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'odanceori 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.J2015}`, { responseType: 'arraybuffer' })
 
@@ -794,7 +794,7 @@ lusifar.LUSIFARCMD({pattern: 'odanceori 2015', fromMe: work, dontAddCommandList:
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'odanceori 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'odanceori 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.J2016}`, { responseType: 'arraybuffer' })
 
@@ -806,7 +806,7 @@ lusifar.LUSIFARCMD({pattern: 'odanceori 2016', fromMe: work, dontAddCommandList:
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'odanceori 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'odanceori 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.J2017}`, { responseType: 'arraybuffer' })
 
@@ -818,7 +818,7 @@ lusifar.LUSIFARCMD({pattern: 'odanceori 2017', fromMe: work, dontAddCommandList:
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'odanceori 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'odanceori 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.J2018}`, { responseType: 'arraybuffer' })
 
@@ -830,7 +830,7 @@ lusifar.LUSIFARCMD({pattern: 'odanceori 2018', fromMe: work, dontAddCommandList:
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'odanceori 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'odanceori 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.J2019}`, { responseType: 'arraybuffer' })
 
@@ -843,7 +843,7 @@ lusifar.LUSIFARCMD({pattern: 'odanceori 2019', fromMe: work, dontAddCommandList:
       }));
 
 //DANCE BHARATH  (K)    
-lusifar.LUSIFARCMD({pattern: 'odanceb 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'odanceb 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.K2015}`, { responseType: 'arraybuffer' })
 
@@ -855,7 +855,7 @@ lusifar.LUSIFARCMD({pattern: 'odanceb 2015', fromMe: work, dontAddCommandList: t
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'odanceb 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'odanceb 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.K2017}`, { responseType: 'arraybuffer' })
 
@@ -867,7 +867,7 @@ lusifar.LUSIFARCMD({pattern: 'odanceb 2017', fromMe: work, dontAddCommandList: t
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'odanceb 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'odanceb 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.K2018}`, { responseType: 'arraybuffer' })
 
@@ -879,7 +879,7 @@ lusifar.LUSIFARCMD({pattern: 'odanceb 2018', fromMe: work, dontAddCommandList: t
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'odanceb 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'odanceb 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.K2019}`, { responseType: 'arraybuffer' })
 
@@ -892,7 +892,7 @@ lusifar.LUSIFARCMD({pattern: 'odanceb 2019', fromMe: work, dontAddCommandList: t
       }));
 
 //ART  (L)     
-lusifar.LUSIFARCMD({pattern: 'oart 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oart 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.L2015}`, { responseType: 'arraybuffer' })
 
@@ -904,7 +904,7 @@ lusifar.LUSIFARCMD({pattern: 'oart 2015', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oart 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oart 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.L2015}`, { responseType: 'arraybuffer' })
 
@@ -916,7 +916,7 @@ lusifar.LUSIFARCMD({pattern: 'oart 2016', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oart 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oart 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.L2015}`, { responseType: 'arraybuffer' })
 
@@ -928,7 +928,7 @@ lusifar.LUSIFARCMD({pattern: 'oart 2017', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oart 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oart 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.L2015}`, { responseType: 'arraybuffer' })
 
@@ -940,7 +940,7 @@ lusifar.LUSIFARCMD({pattern: 'oart 2018', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oart 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oart 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.L2015}`, { responseType: 'arraybuffer' })
 
@@ -953,7 +953,7 @@ lusifar.LUSIFARCMD({pattern: 'oart 2019', fromMe: work, dontAddCommandList: true
       }));
 
 //TAMIL LIT  (M)     
-lusifar.LUSIFARCMD({pattern: 'otlit 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'otlit 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.M2015}`, { responseType: 'arraybuffer' })
 
@@ -965,7 +965,7 @@ lusifar.LUSIFARCMD({pattern: 'otlit 2015', fromMe: work, dontAddCommandList: tru
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'otlit 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'otlit 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.M2016}`, { responseType: 'arraybuffer' })
 
@@ -977,7 +977,7 @@ lusifar.LUSIFARCMD({pattern: 'otlit 2016', fromMe: work, dontAddCommandList: tru
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'otlit 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'otlit 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.M2017}`, { responseType: 'arraybuffer' })
 
@@ -989,7 +989,7 @@ lusifar.LUSIFARCMD({pattern: 'otlit 2017', fromMe: work, dontAddCommandList: tru
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'otlit 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'otlit 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.M2018}`, { responseType: 'arraybuffer' })
 
@@ -1002,7 +1002,7 @@ lusifar.LUSIFARCMD({pattern: 'otlit 2018', fromMe: work, dontAddCommandList: tru
       }));
 
 //SINHALA LIT (N)     
-lusifar.LUSIFARCMD({pattern: 'osilit 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'osilit 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.N2015}`, { responseType: 'arraybuffer' })
 
@@ -1014,7 +1014,7 @@ lusifar.LUSIFARCMD({pattern: 'osilit 2015', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'osilit 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'osilit 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.N2016}`, { responseType: 'arraybuffer' })
 
@@ -1026,7 +1026,7 @@ lusifar.LUSIFARCMD({pattern: 'osilit 2016', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'osilit 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'osilit 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.N2017}`, { responseType: 'arraybuffer' })
 
@@ -1038,7 +1038,7 @@ lusifar.LUSIFARCMD({pattern: 'osilit 2017', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'osilit 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'osilit 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.N2018}`, { responseType: 'arraybuffer' })
 
@@ -1050,7 +1050,7 @@ lusifar.LUSIFARCMD({pattern: 'osilit 2018', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'osilit 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'osilit 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.N2019}`, { responseType: 'arraybuffer' })
 
@@ -1063,7 +1063,7 @@ lusifar.LUSIFARCMD({pattern: 'osilit 2019', fromMe: work, dontAddCommandList: tr
       }));
 
 //ENGLISH LIT (O)     
-lusifar.LUSIFARCMD({pattern: 'oliten 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oliten 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.O2015}`, { responseType: 'arraybuffer' })
 
@@ -1075,7 +1075,7 @@ lusifar.LUSIFARCMD({pattern: 'oliten 2015', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oliten 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oliten 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.O2016}`, { responseType: 'arraybuffer' })
 
@@ -1087,7 +1087,7 @@ lusifar.LUSIFARCMD({pattern: 'oliten 2016', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oliten 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oliten 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.O2017}`, { responseType: 'arraybuffer' })
 
@@ -1099,7 +1099,7 @@ lusifar.LUSIFARCMD({pattern: 'oliten 2017', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oliten 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oliten 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.O2018}`, { responseType: 'arraybuffer' })
 
@@ -1111,7 +1111,7 @@ lusifar.LUSIFARCMD({pattern: 'oliten 2018', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oliten 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oliten 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.O2019}`, { responseType: 'arraybuffer' })
 
@@ -1125,7 +1125,7 @@ lusifar.LUSIFARCMD({pattern: 'oliten 2019', fromMe: work, dontAddCommandList: tr
 
 
 //SECOND LANGUAGE TAMIL (P)
-lusifar.LUSIFARCMD({pattern: 'oslant 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oslant 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.P2015}`, { responseType: 'arraybuffer' })
 
@@ -1137,7 +1137,7 @@ lusifar.LUSIFARCMD({pattern: 'oslant 2015', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oslant 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oslant 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.P2016}`, { responseType: 'arraybuffer' })
 
@@ -1149,7 +1149,7 @@ lusifar.LUSIFARCMD({pattern: 'oslant 2016', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oslant 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oslant 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.P2015}`, { responseType: 'arraybuffer' })
 
@@ -1161,7 +1161,7 @@ lusifar.LUSIFARCMD({pattern: 'oslant 2017', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oslant 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oslant 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.P2015}`, { responseType: 'arraybuffer' })
 
@@ -1173,7 +1173,7 @@ lusifar.LUSIFARCMD({pattern: 'oslant 2018', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oslant 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oslant 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.P2015}`, { responseType: 'arraybuffer' })
 
@@ -1186,7 +1186,7 @@ lusifar.LUSIFARCMD({pattern: 'oslant 2019', fromMe: work, dontAddCommandList: tr
       }));
 
 //JAPAN (Q)
-lusifar.LUSIFARCMD({pattern: 'ojapan 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ojapan 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.Q2015}`, { responseType: 'arraybuffer' })
 
@@ -1198,7 +1198,7 @@ lusifar.LUSIFARCMD({pattern: 'ojapan 2015', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ojapan 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ojapan 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.Q2016}`, { responseType: 'arraybuffer' })
 
@@ -1210,7 +1210,7 @@ lusifar.LUSIFARCMD({pattern: 'ojapan 2016', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ojapan 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ojapan 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.Q2015}`, { responseType: 'arraybuffer' })
 
@@ -1222,7 +1222,7 @@ lusifar.LUSIFARCMD({pattern: 'ojapan 2017', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ojapan 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ojapan 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.Q2015}`, { responseType: 'arraybuffer' })
 
@@ -1234,7 +1234,7 @@ lusifar.LUSIFARCMD({pattern: 'ojapan 2018', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ojapan 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ojapan 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.Q2015}`, { responseType: 'arraybuffer' })
 
@@ -1247,7 +1247,7 @@ lusifar.LUSIFARCMD({pattern: 'ojapan 2019', fromMe: work, dontAddCommandList: tr
       }));
 
 //HINDI (R)
-lusifar.LUSIFARCMD({pattern: 'ohindi 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohindi 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.R2015}`, { responseType: 'arraybuffer' })
 
@@ -1259,7 +1259,7 @@ lusifar.LUSIFARCMD({pattern: 'ohindi 2015', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohindi 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohindi 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.R2016}`, { responseType: 'arraybuffer' })
 
@@ -1271,7 +1271,7 @@ lusifar.LUSIFARCMD({pattern: 'ohindi 2016', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohindi 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohindi 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.R2015}`, { responseType: 'arraybuffer' })
 
@@ -1283,7 +1283,7 @@ lusifar.LUSIFARCMD({pattern: 'ohindi 2017', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohindi 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohindi 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.R2015}`, { responseType: 'arraybuffer' })
 
@@ -1295,7 +1295,7 @@ lusifar.LUSIFARCMD({pattern: 'ohindi 2018', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohindi 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohindi 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.R2015}`, { responseType: 'arraybuffer' })
 
@@ -1309,7 +1309,7 @@ lusifar.LUSIFARCMD({pattern: 'ohindi 2019', fromMe: work, dontAddCommandList: tr
 
 
 //GEOGROPHY (S)
-lusifar.LUSIFARCMD({pattern: 'ogeog 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ogeog 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.S2015}`, { responseType: 'arraybuffer' })
 
@@ -1321,7 +1321,7 @@ lusifar.LUSIFARCMD({pattern: 'ogeog 2015', fromMe: work, dontAddCommandList: tru
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ogeog 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ogeog 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.S2016}`, { responseType: 'arraybuffer' })
 
@@ -1333,7 +1333,7 @@ lusifar.LUSIFARCMD({pattern: 'ogeog 2016', fromMe: work, dontAddCommandList: tru
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ogeog 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ogeog 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.S2015}`, { responseType: 'arraybuffer' })
 
@@ -1345,7 +1345,7 @@ lusifar.LUSIFARCMD({pattern: 'ogeog 2017', fromMe: work, dontAddCommandList: tru
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ogeog 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ogeog 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.S2015}`, { responseType: 'arraybuffer' })
 
@@ -1357,7 +1357,7 @@ lusifar.LUSIFARCMD({pattern: 'ogeog 2018', fromMe: work, dontAddCommandList: tru
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ogeog 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ogeog 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.S2015}`, { responseType: 'arraybuffer' })
 
@@ -1370,7 +1370,7 @@ lusifar.LUSIFARCMD({pattern: 'ogeog 2019', fromMe: work, dontAddCommandList: tru
       }));
 
 //FRENCH (T)
-lusifar.LUSIFARCMD({pattern: 'ofrench 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ofrench 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.T2015}`, { responseType: 'arraybuffer' })
 
@@ -1382,7 +1382,7 @@ lusifar.LUSIFARCMD({pattern: 'ofrench 2015', fromMe: work, dontAddCommandList: t
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ofrench 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ofrench 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.T2016}`, { responseType: 'arraybuffer' })
 
@@ -1394,7 +1394,7 @@ lusifar.LUSIFARCMD({pattern: 'ofrench 2016', fromMe: work, dontAddCommandList: t
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ofrench 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ofrench 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.T2015}`, { responseType: 'arraybuffer' })
 
@@ -1406,7 +1406,7 @@ lusifar.LUSIFARCMD({pattern: 'ofrench 2017', fromMe: work, dontAddCommandList: t
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ofrench 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ofrench 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.T2015}`, { responseType: 'arraybuffer' })
 
@@ -1418,7 +1418,7 @@ lusifar.LUSIFARCMD({pattern: 'ofrench 2018', fromMe: work, dontAddCommandList: t
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ofrench 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ofrench 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.T2015}`, { responseType: 'arraybuffer' })
 
@@ -1431,7 +1431,7 @@ lusifar.LUSIFARCMD({pattern: 'ofrench 2019', fromMe: work, dontAddCommandList: t
       }));
 
 //ENTRENEURSHIP STUDIES (U)
-lusifar.LUSIFARCMD({pattern: 'oentrenstu 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oentrenstu 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.U2015}`, { responseType: 'arraybuffer' })
 
@@ -1443,7 +1443,7 @@ lusifar.LUSIFARCMD({pattern: 'oentrenstu 2015', fromMe: work, dontAddCommandList
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oentrenstu 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oentrenstu 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.U2016}`, { responseType: 'arraybuffer' })
 
@@ -1455,7 +1455,7 @@ lusifar.LUSIFARCMD({pattern: 'oentrenstu 2016', fromMe: work, dontAddCommandList
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oentrenstu 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oentrenstu 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.U2015}`, { responseType: 'arraybuffer' })
 
@@ -1467,7 +1467,7 @@ lusifar.LUSIFARCMD({pattern: 'oentrenstu 2017', fromMe: work, dontAddCommandList
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oentrenstu 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oentrenstu 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.U2015}`, { responseType: 'arraybuffer' })
 
@@ -1479,7 +1479,7 @@ lusifar.LUSIFARCMD({pattern: 'oentrenstu 2018', fromMe: work, dontAddCommandList
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oentrenstu 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oentrenstu 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.U2015}`, { responseType: 'arraybuffer' })
 
@@ -1492,7 +1492,7 @@ lusifar.LUSIFARCMD({pattern: 'oentrenstu 2019', fromMe: work, dontAddCommandList
       }));
 
 //CIVIC (V)
-lusifar.LUSIFARCMD({pattern: 'ocivic 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ocivic 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.V2015}`, { responseType: 'arraybuffer' })
 
@@ -1504,7 +1504,7 @@ lusifar.LUSIFARCMD({pattern: 'ocivic 2015', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ocivic 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ocivic 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.V2016}`, { responseType: 'arraybuffer' })
 
@@ -1516,7 +1516,7 @@ lusifar.LUSIFARCMD({pattern: 'ocivic 2016', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ocivic 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ocivic 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.V2015}`, { responseType: 'arraybuffer' })
 
@@ -1528,7 +1528,7 @@ lusifar.LUSIFARCMD({pattern: 'ocivic 2017', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ocivic 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ocivic 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.V2015}`, { responseType: 'arraybuffer' })
 
@@ -1540,7 +1540,7 @@ lusifar.LUSIFARCMD({pattern: 'ocivic 2018', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ocivic 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ocivic 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.V2015}`, { responseType: 'arraybuffer' })
 
@@ -1553,7 +1553,7 @@ lusifar.LUSIFARCMD({pattern: 'ocivic 2019', fromMe: work, dontAddCommandList: tr
       }));
 
 //BUSINAS ACCOUNTING STUDIES (W)
-lusifar.LUSIFARCMD({pattern: 'obusiac 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'obusiac 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.W2015}`, { responseType: 'arraybuffer' })
 
@@ -1565,7 +1565,7 @@ lusifar.LUSIFARCMD({pattern: 'obusiac 2015', fromMe: work, dontAddCommandList: t
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'obusiac 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'obusiac 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A2016}`, { responseType: 'arraybuffer' })
 
@@ -1577,7 +1577,7 @@ lusifar.LUSIFARCMD({pattern: 'obusiac 2016', fromMe: work, dontAddCommandList: t
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'obusiac 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'obusiac 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A2015}`, { responseType: 'arraybuffer' })
 
@@ -1589,7 +1589,7 @@ lusifar.LUSIFARCMD({pattern: 'obusiac 2017', fromMe: work, dontAddCommandList: t
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'obusiac 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'obusiac 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A2015}`, { responseType: 'arraybuffer' })
 
@@ -1601,7 +1601,7 @@ lusifar.LUSIFARCMD({pattern: 'obusiac 2018', fromMe: work, dontAddCommandList: t
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'obusiac 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'obusiac 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A2015}`, { responseType: 'arraybuffer' })
 
@@ -1614,7 +1614,7 @@ lusifar.LUSIFARCMD({pattern: 'obusiac 2019', fromMe: work, dontAddCommandList: t
       }));
 
 //IT (x)
-lusifar.LUSIFARCMD({pattern: 'oict 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oict 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.X2015}`, { responseType: 'arraybuffer' })
 
@@ -1626,7 +1626,7 @@ lusifar.LUSIFARCMD({pattern: 'oict 2015', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oict 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oict 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.X2016}`, { responseType: 'arraybuffer' })
 
@@ -1638,7 +1638,7 @@ lusifar.LUSIFARCMD({pattern: 'oict 2016', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oict 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oict 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.X2015}`, { responseType: 'arraybuffer' })
 
@@ -1650,7 +1650,7 @@ lusifar.LUSIFARCMD({pattern: 'oict 2017', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oict 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oict 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.X2015}`, { responseType: 'arraybuffer' })
 
@@ -1662,7 +1662,7 @@ lusifar.LUSIFARCMD({pattern: 'oict 2018', fromMe: work, dontAddCommandList: true
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oict 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oict 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.X2015}`, { responseType: 'arraybuffer' })
 
@@ -1675,7 +1675,7 @@ lusifar.LUSIFARCMD({pattern: 'oict 2019', fromMe: work, dontAddCommandList: true
       }));
 
 //HOME economic (y)
-lusifar.LUSIFARCMD({pattern: 'ohomec 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohomec 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.Y2015}`, { responseType: 'arraybuffer' })
 
@@ -1687,7 +1687,7 @@ lusifar.LUSIFARCMD({pattern: 'ohomec 2015', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohomec 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohomec 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.Y2016}`, { responseType: 'arraybuffer' })
 
@@ -1699,7 +1699,7 @@ lusifar.LUSIFARCMD({pattern: 'ohomec 2016', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohomec 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohomec 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.Y2015}`, { responseType: 'arraybuffer' })
 
@@ -1711,7 +1711,7 @@ lusifar.LUSIFARCMD({pattern: 'ohomec 2017', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohomec 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohomec 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.Y2015}`, { responseType: 'arraybuffer' })
 
@@ -1723,7 +1723,7 @@ lusifar.LUSIFARCMD({pattern: 'ohomec 2018', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohomec 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohomec 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.Y2015}`, { responseType: 'arraybuffer' })
 
@@ -1736,7 +1736,7 @@ lusifar.LUSIFARCMD({pattern: 'ohomec 2019', fromMe: work, dontAddCommandList: tr
       }));
 
       //Helth (z)
-lusifar.LUSIFARCMD({pattern: 'ohelth 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohelth 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.Z2015}`, { responseType: 'arraybuffer' })
 
@@ -1748,7 +1748,7 @@ lusifar.LUSIFARCMD({pattern: 'ohelth 2015', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohelth 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohelth 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.Z2016}`, { responseType: 'arraybuffer' })
 
@@ -1760,7 +1760,7 @@ lusifar.LUSIFARCMD({pattern: 'ohelth 2016', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohelth 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohelth 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.Z2015}`, { responseType: 'arraybuffer' })
 
@@ -1772,7 +1772,7 @@ lusifar.LUSIFARCMD({pattern: 'ohelth 2017', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohelth 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohelth 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.Z2015}`, { responseType: 'arraybuffer' })
 
@@ -1784,7 +1784,7 @@ lusifar.LUSIFARCMD({pattern: 'ohelth 2018', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'ohelth 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'ohelth 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.Z2015}`, { responseType: 'arraybuffer' })
 
@@ -1797,7 +1797,7 @@ lusifar.LUSIFARCMD({pattern: 'ohelth 2019', fromMe: work, dontAddCommandList: tr
       }));
 
 //media (A2)
-lusifar.LUSIFARCMD({pattern: 'omedia 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'omedia 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A22015}`, { responseType: 'arraybuffer' })
 
@@ -1809,7 +1809,7 @@ lusifar.LUSIFARCMD({pattern: 'omedia 2015', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'omedia 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'omedia 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A22016}`, { responseType: 'arraybuffer' })
 
@@ -1821,7 +1821,7 @@ lusifar.LUSIFARCMD({pattern: 'omedia 2016', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'omedia 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'omedia 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A22015}`, { responseType: 'arraybuffer' })
 
@@ -1833,7 +1833,7 @@ lusifar.LUSIFARCMD({pattern: 'omedia 2017', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'omedia 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'omedia 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A22015}`, { responseType: 'arraybuffer' })
 
@@ -1845,7 +1845,7 @@ lusifar.LUSIFARCMD({pattern: 'omedia 2018', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'omedia 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'omedia 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A22015}`, { responseType: 'arraybuffer' })
 
@@ -1859,7 +1859,7 @@ lusifar.LUSIFARCMD({pattern: 'omedia 2019', fromMe: work, dontAddCommandList: tr
 
 
 //art and craft (A3)
-lusifar.LUSIFARCMD({pattern: 'oarcraft 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oarcraft 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A32015}`, { responseType: 'arraybuffer' })
 
@@ -1871,7 +1871,7 @@ lusifar.LUSIFARCMD({pattern: 'oarcraft 2015', fromMe: work, dontAddCommandList: 
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oarcraft 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oarcraft 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A32016}`, { responseType: 'arraybuffer' })
 
@@ -1883,7 +1883,7 @@ lusifar.LUSIFARCMD({pattern: 'oarcraft 2016', fromMe: work, dontAddCommandList: 
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oarcraft 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oarcraft 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A32015}`, { responseType: 'arraybuffer' })
 
@@ -1895,7 +1895,7 @@ lusifar.LUSIFARCMD({pattern: 'oarcraft 2017', fromMe: work, dontAddCommandList: 
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oarcraft 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oarcraft 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A32015}`, { responseType: 'arraybuffer' })
 
@@ -1907,7 +1907,7 @@ lusifar.LUSIFARCMD({pattern: 'oarcraft 2018', fromMe: work, dontAddCommandList: 
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oarcraft 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oarcraft 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A32015}`, { responseType: 'arraybuffer' })
 
@@ -1920,7 +1920,7 @@ lusifar.LUSIFARCMD({pattern: 'oarcraft 2019', fromMe: work, dontAddCommandList: 
       }));
 
 //agree (A4)
-lusifar.LUSIFARCMD({pattern: 'oagree 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oagree 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A42015}`, { responseType: 'arraybuffer' })
 
@@ -1932,7 +1932,7 @@ lusifar.LUSIFARCMD({pattern: 'oagree 2015', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oagree 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oagree 2016', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A42016}`, { responseType: 'arraybuffer' })
 
@@ -1944,7 +1944,7 @@ lusifar.LUSIFARCMD({pattern: 'oagree 2016', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oagree 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oagree 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A42015}`, { responseType: 'arraybuffer' })
 
@@ -1956,7 +1956,7 @@ lusifar.LUSIFARCMD({pattern: 'oagree 2017', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oagree 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oagree 2018', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A42015}`, { responseType: 'arraybuffer' })
 
@@ -1968,7 +1968,7 @@ lusifar.LUSIFARCMD({pattern: 'oagree 2018', fromMe: work, dontAddCommandList: tr
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oagree 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oagree 2019', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A42015}`, { responseType: 'arraybuffer' })
 
@@ -1981,7 +1981,7 @@ lusifar.LUSIFARCMD({pattern: 'oagree 2019', fromMe: work, dontAddCommandList: tr
       }));
 
 //DISIGN TECHNOLOGY (A4)
-lusifar.LUSIFARCMD({pattern: 'oisigntech 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oisigntech 2015', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A12015}`, { responseType: 'arraybuffer' })
 
@@ -1993,7 +1993,7 @@ lusifar.LUSIFARCMD({pattern: 'oisigntech 2015', fromMe: work, dontAddCommandList
   
       }));
 
-lusifar.LUSIFARCMD({pattern: 'oisigntech 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'oisigntech 2017', fromMe: work, dontAddCommandList: true}, (async (message, match) => {
   
       var webimage = await axios.get(`${EX.A12017}`, { responseType: 'arraybuffer' })
 

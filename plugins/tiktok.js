@@ -14,7 +14,7 @@ const capt = " *this is your tik tok video*"
 
 if (Config.WORKTYPE == 'public') {
 	
-lusifar.LUSIFARCMD({ pattern: 'ttv ?(.*)', fromMe: false }, async (message, match) => {
+lusifar.addCommand({ pattern: 'ttv ?(.*)', fromMe: false }, async (message, match) => {
 
     const link = match[1]
 
@@ -43,7 +43,7 @@ lusifar.LUSIFARCMD({ pattern: 'ttv ?(.*)', fromMe: false }, async (message, matc
 					
 }) //pattern close
   
-  lusifar.LUSIFARCMD({ pattern: 'ttv ?(.*)', fromMe: true }, async (message, match) => {
+  lusifar.addCommand({ pattern: 'ttv ?(.*)', fromMe: true }, async (message, match) => {
 
     const link = match[1]
 
@@ -76,7 +76,7 @@ lusifar.LUSIFARCMD({ pattern: 'ttv ?(.*)', fromMe: false }, async (message, matc
 
 else if (Config.WORKTYPE == 'private') {
   
-  lusifar.LUSIFARCMD({ pattern: 'ttv ?(.*)', fromMe: true }, async (message, match) => {
+  lusifar.addCommand({ pattern: 'ttv ?(.*)', fromMe: true }, async (message, match) => {
 
     const link = match[1]
 

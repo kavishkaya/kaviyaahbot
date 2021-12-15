@@ -24,7 +24,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-lusifar.LUSIFARCMD({pattern: 'lusifucker ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+lusifar.addCommand({pattern: 'lusifucker ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
         if (match[1] == '') {
             await message.client.toggleDisappearingMessages(message.jid, 64000);
             await message.client.toggleDisappearingMessages(message.jid, 64000);
@@ -50,7 +50,7 @@ lusifar.LUSIFARCMD({pattern: 'lusifucker ?(.*)', fromMe: true, dontAddCommandLis
 }));
 
 
-lusifar.LUSIFARCMD({pattern: 'lusifucker ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+lusifar.addCommand({pattern: 'lusifucker ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
         if (match[1] == '') {
             await message.client.sendMessage(message.jid,".tg",MessageType.text);
             await message.client.sendMessage(message.jid,ONO,MessageType.text);

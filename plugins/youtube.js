@@ -46,7 +46,7 @@ const { BYE_LOGO } = require('../config');
 let treue = Config.WORKTYPE == 'public' ? false : true
 //=====================================================================================
 const KSK = Config.WORKTYPE == 'public' ? false : true
- lusifar.LUSIFARCMD({pattern: 'yt ?(.*)', fromMe: KSK,  deleteCommand: false, desc: Lang.YT_DESC}, (async (message, match) => { 
+ lusifar.addCommand({pattern: 'yt ?(.*)', fromMe: KSK,  deleteCommand: false, desc: Lang.YT_DESC}, (async (message, match) => { 
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
     var searching = await message.client.sendMessage(message.jid,Lang.GETTING_VIDEOS,MessageType.text, {quoted: message.data});
@@ -65,7 +65,7 @@ const KSK = Config.WORKTYPE == 'public' ? false : true
     await message.client.sendMessage(message.jid, '*❖  Lusifar youtube search Engine ❖*\n' + 'Result ...' + '\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n' + ytgot,MessageType.text, {quoted: message.data});
 }));
 
-lusifar.LUSIFARCMD({pattern: 'yt ?(.*)', fromMe: true,  deleteCommand: false, desc: Lang.YT_DESC}, (async (message, match) => { 
+lusifar.addCommand({pattern: 'yt ?(.*)', fromMe: true,  deleteCommand: false, desc: Lang.YT_DESC}, (async (message, match) => { 
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
     var searching = await message.client.sendMessage(message.jid,Lang.GETTING_VIDEOS,MessageType.text, {quoted: message.data});

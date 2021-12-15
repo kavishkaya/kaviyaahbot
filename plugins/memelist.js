@@ -16,7 +16,7 @@ const Ln = "*▷Lusifar මීම් ලැයිස්තුව ඔබට අ�
 const code = "*╔═════◉Lusifar◉═════╗*\n           Lusifar Bot\n*❖═මීම් ලැයිස්තුව  Meme Pack═❖*\n\n*💠.yasai       ❴your text❵*\n*💠.uddika    ❴your text❵*\n*💠.aah          ❴your text❵*\n*💠.sir            ❴your text❵*\n*💠.my3         ❴your text❵*\n*💠.fuck         ❴your text❵*\n*💠.hii             ❴your text❵*\n*💠.asai          ❴your text❵*\n*💠.hapoi       ❴your text❵*\n*💠.anura       ❴your text❵*\n*💠.gemba       ❴your text❵*\n*💠.wow       ❴your text❵*\n*💠.hapo       ❴your text❵*\n*💠.babah       ❴your text❵*\n*💠.mcn       ❴your text❵*\n*💠.nah       ❴your text❵*\n*╚═══❖══▣══▣══❖═══╝*\n\n*"
 let td = Config.WORKTYPE == 'public' ? false : true
     
-      lusifar.LUSIFARCMD({pattern: 'mmpack', fromMe: td, desc: 'Create meme',}, (async (message, match) => {
+      lusifar.addCommand({pattern: 'mmpack', fromMe: td, desc: 'Create meme',}, (async (message, match) => {
 
     await message.client.sendMessage(
   
@@ -24,7 +24,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
   
   }));
 
-    lusifar.LUSIFARCMD({ pattern: 'my3 ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+    lusifar.addCommand({ pattern: 'my3 ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -34,7 +34,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-    lusifar.LUSIFARCMD({ pattern: 'fuck ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+    lusifar.addCommand({ pattern: 'fuck ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -44,7 +44,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-    lusifar.LUSIFARCMD({ pattern: 'hii ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+    lusifar.addCommand({ pattern: 'hii ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -54,7 +54,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-     lusifar.LUSIFARCMD({ pattern: 'sir ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+     lusifar.addCommand({ pattern: 'sir ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -64,7 +64,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-    lusifar.LUSIFARCMD({ pattern: 'yasai ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+    lusifar.addCommand({ pattern: 'yasai ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -74,7 +74,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-     lusifar.LUSIFARCMD({ pattern: 'hapoi ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+     lusifar.addCommand({ pattern: 'hapoi ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -84,7 +84,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-      lusifar.LUSIFARCMD({ pattern: 'uddika ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+      lusifar.addCommand({ pattern: 'uddika ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -94,7 +94,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-      lusifar.LUSIFARCMD({ pattern: 'aah ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+      lusifar.addCommand({ pattern: 'aah ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -104,7 +104,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-     lusifar.LUSIFARCMD({ pattern: 'asai ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+     lusifar.addCommand({ pattern: 'asai ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -114,7 +114,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
     
-   lusifar.LUSIFARCMD({ pattern: 'wow ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+   lusifar.addCommand({ pattern: 'wow ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -124,7 +124,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
    
-   lusifar.LUSIFARCMD({ pattern: 'hapo ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+   lusifar.addCommand({ pattern: 'hapo ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -134,7 +134,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
   
-     lusifar.LUSIFARCMD({ pattern: 'anura ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+     lusifar.addCommand({ pattern: 'anura ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -144,7 +144,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-     lusifar.LUSIFARCMD({ pattern: 'macn ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+     lusifar.addCommand({ pattern: 'macn ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -154,7 +154,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-     lusifar.LUSIFARCMD({ pattern: 'babah ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+     lusifar.addCommand({ pattern: 'babah ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -164,7 +164,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-lusifar.LUSIFARCMD({ pattern: 'gemba ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+lusifar.addCommand({ pattern: 'gemba ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -174,7 +174,7 @@ lusifar.LUSIFARCMD({ pattern: 'gemba ?(.*)', fromMe: td, dontAddCommandList: tru
 
     }));
 
-lusifar.LUSIFARCMD({ pattern: 'nah ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+lusifar.addCommand({ pattern: 'nah ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -184,7 +184,7 @@ lusifar.LUSIFARCMD({ pattern: 'nah ?(.*)', fromMe: td, dontAddCommandList: true 
 
     }));
 
-lusifar.LUSIFARCMD({ pattern: 'kaluhutta ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
+lusifar.addCommand({ pattern: 'kaluhutta ?(.*)', fromMe: td, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 

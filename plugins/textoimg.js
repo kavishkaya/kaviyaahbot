@@ -13,7 +13,7 @@ const Language = require('../language');
 const Lang = Language.getString('scrapers');
 
 if (Config.WORKTYPE == 'public') {
-lusifar.LUSIFARCMD({pattern: 'textimg', fromMe: false, desc: 'Text To Lmage List'}, (async (message, match) => {
+lusifar.addCommand({pattern: 'textimg', fromMe: false, desc: 'Text To Lmage List'}, (async (message, match) => {
 
     var r_text = new Array ();
     

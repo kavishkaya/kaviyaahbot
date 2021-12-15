@@ -20,7 +20,7 @@ const Lang = Language.getString('filters');
 
 if (Config.WORKTYPE == 'private') {
 
-lusifar.LUSIFARCMD({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC, dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
 
     if (match === null) {
@@ -40,7 +40,7 @@ lusifar.LUSIFARCMD({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DES
         await message.client.sendMessage(message.jid,Lang.FILTERED.format(match[0].replace(/['"]+/g, '')),MessageType.text);
     }
 }));
-lusifar.LUSIFARCMD({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
     if (match === null) {
         return await message.client.sendMessage(message.jid,Lang.NEED_REPLY + '\n*Example:* ```.stop "hello"```',MessageType.text)
@@ -54,7 +54,7 @@ lusifar.LUSIFARCMD({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, d
         await message.client.sendMessage(message.jid,Lang.DELETED, MessageType.text)
     }
 }));
-lusifar.LUSIFARCMD({on: 'text', fromMe: false }, (async (message, match) => {
+lusifar.addCommand({on: 'text', fromMe: false }, (async (message, match) => {
     if(Config.BGMFILTER){
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
@@ -83,7 +83,7 @@ if(pattern.test(message.message)){
 }
 else if (Config.WORKTYPE == 'public') {
 
-lusifar.LUSIFARCMD({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC, dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
 
     if (match === null) {
@@ -103,7 +103,7 @@ lusifar.LUSIFARCMD({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DES
         await message.client.sendMessage(message.jid,Lang.FILTERED.format(match[0].replace(/['"]+/g, '')),MessageType.text);
     }
 }));
-lusifar.LUSIFARCMD({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
     if (match === null) {
         return await message.client.sendMessage(message.jid,Lang.NEED_REPLY + '\n*Example:* ```.stop "hello"```',MessageType.text)
@@ -120,7 +120,7 @@ lusifar.LUSIFARCMD({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, d
     
 if (Config.PLKBGM == 'one') {  
     
-lusifar.LUSIFARCMD({on: 'text', fromMe: false}, (async (message, match) => {
+lusifar.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
         if(Config.BGMFILTER){
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
@@ -152,7 +152,7 @@ if(pattern.test(message.message)){
 }));
 }
     if (Config.PLKBGM == 'two') {    
-    lusifar.LUSIFARCMD({on: 'text', fromMe: false}, (async (message, match) => {   
+    lusifar.addCommand({on: 'text', fromMe: false}, (async (message, match) => {   
         if(Config.BGMFILTER){
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
@@ -183,7 +183,7 @@ if(pattern.test(message.message)){
     );
 }));
 }
-lusifar.LUSIFARCMD({on: 'text', fromMe: false}, (async (message, match) => {
+lusifar.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
     if(Config.STICKERP){
     let banned = jid.find( Jid => Jid === message.jid);
     if(banned !== undefined) return

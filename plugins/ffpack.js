@@ -18,7 +18,7 @@ const code = "* 50 FF LOGO PACK_*\n\n*🤖.ff01 : Makes FF logo*\n*send free fir
 const KSV = Config.WORKTYPE == 'public' ? false : true
 
     
- kavishka.LUSIFARCMD({pattern: 'ffpack', fromMe: KSV, desc: Ln,}, (async (message, match) => {
+ kavishka.addCommand({pattern: 'ffpack', fromMe: KSV, desc: Ln,}, (async (message, match) => {
 
     await message.client.sendMessage(
   
@@ -26,7 +26,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
   
   }));
  
- kavishka.LUSIFARCMD({ pattern: 'ff02 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+ kavishka.addCommand({ pattern: 'ff02 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -36,7 +36,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
- kavishka.LUSIFARCMD({ pattern: 'ff01 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+ kavishka.addCommand({ pattern: 'ff01 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -46,7 +46,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff03 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff03 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -56,7 +56,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
     
     }));
  
- kavishka.LUSIFARCMD({ pattern: 'ff04 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+ kavishka.addCommand({ pattern: 'ff04 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -66,7 +66,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff05 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff05 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -76,7 +76,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff06 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff06 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -86,7 +86,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff07 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff07 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -96,7 +96,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff08 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff08 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -106,7 +106,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff09 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff09 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -116,7 +116,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff10 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff10 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -126,7 +126,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff11 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff11 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -136,7 +136,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff12 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff12 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -146,7 +146,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff13 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff13 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -156,7 +156,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff14 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff14 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -166,7 +166,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff15 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff15 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -176,7 +176,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff16 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff16 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -186,7 +186,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff17 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff17 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -196,7 +196,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff18 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff18 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -206,7 +206,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff19 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff19 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -216,7 +216,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff20 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff20 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -226,7 +226,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff21 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff21 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -236,7 +236,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff22 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff22 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -246,7 +246,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff23 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff23 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -256,7 +256,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff24 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff24 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -266,7 +266,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff25 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff25 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -276,7 +276,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff26 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff26 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -286,7 +286,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-  kavishka.LUSIFARCMD({ pattern: 'ff27 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+  kavishka.addCommand({ pattern: 'ff27 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -296,7 +296,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
 
     }));
  
-   kavishka.LUSIFARCMD({ pattern: 'ff28 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff28 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -305,7 +305,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff29 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff29 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -314,7 +314,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff30 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff30 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -323,7 +323,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff31 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff31 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -332,7 +332,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff32 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff32 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -341,7 +341,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff33 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff33 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -350,7 +350,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff34 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff34 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -359,7 +359,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff35 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff35 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -368,7 +368,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff36 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff36 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -377,7 +377,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff37 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff37 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -386,7 +386,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff38 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff38 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -395,7 +395,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff39 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff39 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -404,7 +404,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff40 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff40 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -413,7 +413,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff41 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff41 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -422,7 +422,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff42 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff42 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -431,7 +431,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff43 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff43 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -440,7 +440,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff44 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff44 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -449,7 +449,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff45 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff45 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -458,7 +458,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff46 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff46 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -467,7 +467,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff47 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff47 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -476,7 +476,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff48 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff48 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -485,7 +485,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff49 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff49 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 
@@ -494,7 +494,7 @@ const KSV = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN })
 
     }));
-   kavishka.LUSIFARCMD({ pattern: 'ff50 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
+   kavishka.addCommand({ pattern: 'ff50 ?(.*)', fromMe: KSV, dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '' ) return await message.sendMessage(ll);
 

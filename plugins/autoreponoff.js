@@ -38,7 +38,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
     }
 
    
-    lusifar.LUSIFARCMD({pattern: 'autoreply ?(.*)', fromMe: true, desc: l_dsc, usage: '.autoreply on / off' }, (async (message, match) => {
+    lusifar.addCommand({pattern: 'autoreply ?(.*)', fromMe: true, desc: l_dsc, usage: '.autoreply on / off' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 

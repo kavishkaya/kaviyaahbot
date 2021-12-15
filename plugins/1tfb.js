@@ -20,7 +20,7 @@ let KSP = Config.WORKTYPE == 'public' ? true : false
 // -----------------------------------------------------------------------
 //                               MAIN COMMAND
 // -----------------------------------------------------------------------
-lusifar.LUSIFARCMD({ pattern: 'fb ?(.*)', fromMe: KSP , desc: 'facebook video download'}, async (message, match) => {
+lusifar.addCommand({ pattern: 'fb ?(.*)', fromMe: KSP , desc: 'facebook video download'}, async (message, match) => {
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
     const link = match[1]
     if (!link) return await message.sendMessage("🧛‍♂️ *Give Vaild FB Link* ")
@@ -44,7 +44,7 @@ lusifar.LUSIFARCMD({ pattern: 'fb ?(.*)', fromMe: KSP , desc: 'facebook video do
 					})
 					
 }) //pattern close
-lusifar.LUSIFARCMD({ pattern: 'fb ?(.*)', fromMe: KSKK , dontAddCommandList: true}, async (message, match) => {
+lusifar.addCommand({ pattern: 'fb ?(.*)', fromMe: KSKK , dontAddCommandList: true}, async (message, match) => {
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
     const link = match[1]
     if (!link) return await message.sendMessage("🧛‍♂️ *Give Vaild FB Link* ")
@@ -72,7 +72,7 @@ lusifar.LUSIFARCMD({ pattern: 'fb ?(.*)', fromMe: KSKK , dontAddCommandList: tru
 // -----------------------------------------------------------------------
 //                               NOT WORKING COMMAND
 // -----------------------------------------------------------------------
-lusifar.LUSIFARCMD({ pattern: 'xxfbsd ?(.*)', fromMe:KSKK , dontAddCommandList: true}, async (message, match) => {
+lusifar.addCommand({ pattern: 'xxfbsd ?(.*)', fromMe:KSKK , dontAddCommandList: true}, async (message, match) => {
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
     const link = match[1]
     if (!link) return await message.sendMessage("🧛‍♂️ *Give Vaild FB Link* ")
