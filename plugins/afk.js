@@ -30,7 +30,7 @@ function secondsToHms(d) {
     return hDisplay + mDisplay + sDisplay; 
 }
 
-lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+lusifar.LUSIFARCMD({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (Config.AFKMSG == 'default') {
 
         if (AFK.isAfk && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
@@ -82,7 +82,7 @@ lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (me
     }
 }));
 
-lusifar.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
+lusifar.LUSIFARCMD({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
     if (AFK.isAfk && !message.id.startsWith('3EB0')) {
         AFK.lastseen = 0;
         AFK.reason = false;
@@ -92,7 +92,7 @@ lusifar.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (mes
     }
 }));
 
-lusifar.addCommand({pattern: 'afk ?(.*)', fromMe: true, dontAddCommandList: true, deleteCommand: false, desc: Lang.AFK_DESC}, (async (message, match) => {     
+lusifar.LUSIFARCMD({pattern: 'afk ?(.*)', fromMe: true, dontAddCommandList: true, deleteCommand: false, desc: Lang.AFK_DESC}, (async (message, match) => {     
     if (!AFK.isAfk) {
         AFK.lastseen = Math.round((new Date()).getTime() / 1000);
         if (match[1] !== '') { AFK.reason = match[1]; }

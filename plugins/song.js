@@ -49,7 +49,7 @@ const Clang = Language.getString('covid');
 
 
    
-       lusifar.addCommand({pattern: 'song ?(.*)', fromMe: true , desc: Lang.SONG_DESC}, (async (message, match) => { 
+       lusifar.LUSIFARCMD({pattern: 'song ?(.*)', fromMe: true , desc: Lang.SONG_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
         let arama = await yts(match[1]);
@@ -84,7 +84,7 @@ const Clang = Language.getString('covid');
     
 
 
-       lusifar.addCommand({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
+       lusifar.LUSIFARCMD({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
         let arama = await yts(match[1]);
@@ -131,7 +131,7 @@ let KSK = config.WORKTYPE == 'public' ? false : true
 //උස්සන්නද ආවෙ බේසිකයෝ.බොහොම අමාරුවෙන් හැදුවෙ.උස්සන එකා අවජාතකයෙක් කියල හිතාගන්න පුලුවන් පොන්න හැත්ත.හුකන පොන්නයෝ
 //normal mode
 //with info
-    lusifar.addCommand({ pattern: 'song ?(.*)', fromMe: KSK, deleteCommand: false, dontAddCommandList:true,  deleteCommand: false}, async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'song ?(.*)', fromMe: KSK, deleteCommand: false, dontAddCommandList:true,  deleteCommand: false}, async (message, match) => {
         const linkk = match[1]
         if (!linkk) return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text)
         await message.client.sendMessage(message.jid,config.SONGD,MessageType.text, {quoted: message.data});
@@ -153,7 +153,7 @@ let KSK = config.WORKTYPE == 'public' ? false : true
       },
     )
     
-        lusifar.addCommand({ pattern: 'song ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList:true,  deleteCommand: false}, async (message, match) => {
+        lusifar.LUSIFARCMD({ pattern: 'song ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList:true,  deleteCommand: false}, async (message, match) => {
         const linkk = match[1]
         if (!linkk) return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text)
         await message.client.sendMessage(message.jid,config.SONGD,MessageType.text, {quoted: message.data});

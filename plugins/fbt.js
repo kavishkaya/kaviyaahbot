@@ -87,7 +87,7 @@ Download.Facebook{
 // -----------------------------------------------------------------------
 //                               MAIN COMMAND
 // -----------------------------------------------------------------------
-lusifar.addCommand({ pattern: 'afb ?(.*)', fromMe: ramiya , desc: 'mada'}, async (message, match) => {
+lusifar.LUSIFARCMD({ pattern: 'afb ?(.*)', fromMe: ramiya , desc: 'mada'}, async (message, match) => {
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
     const link = match[1]
 
@@ -116,7 +116,7 @@ lusifar.addCommand({ pattern: 'afb ?(.*)', fromMe: ramiya , desc: 'mada'}, async
 
 }) //pattern close
 
-lusifar.addCommand({ pattern: 'afb ?(.*)', fromMe: teenuh , desc: 'mada'}, async (message, match) => {
+lusifar.LUSIFARCMD({ pattern: 'afb ?(.*)', fromMe: teenuh , desc: 'mada'}, async (message, match) => {
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
     const link = match[1]
 
@@ -150,7 +150,7 @@ lusifar.addCommand({ pattern: 'afb ?(.*)', fromMe: teenuh , desc: 'mada'}, async
 //                               NOT WORKING COMMAND
 // -----------------------------------------------------------------------
 
-lusifar.addCommand({ pattern: 'xxfbsd ?(.*)', fromMe: ramiya , dontAddCommandList: true}, async (message, match) => {
+lusifar.LUSIFARCMD({ pattern: 'xxfbsd ?(.*)', fromMe: ramiya , dontAddCommandList: true}, async (message, match) => {
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
     const link = match[1]
 

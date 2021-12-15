@@ -21,7 +21,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-lusifar.addCommand({pattern: 'clear', fromMe: true, desc: END, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'clear', fromMe: true, desc: END, dontAddCommandList: true}, (async (message, match) => {
 
     await message.sendMessage('```cleaning chat...```');
     await message.client.modifyChat (message.jid, ChatModification.delete);

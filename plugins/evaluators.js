@@ -55,7 +55,7 @@ if (Config.LANG == 'PT') ldc = '*Link Detectado!*'
 if (Config.LANG == 'RU') ldc = '*Ссылка обнаружена!*'
 if (Config.LANG == 'HI') ldc = '*लिंक का पता चला!*'
 if (Config.LANG == 'ES') ldc = '*Enlace Detectado!*'
-lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+lusifar.LUSIFARCMD({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (antilink_var == 'true' && message.jid !== '905511384572-1616356915@g.us') {
         let regex1 = new RegExp('http://')
         let regex2 = new RegExp('https://chat')
@@ -161,7 +161,7 @@ if (Config.LANG == 'PT') ldc = '*Link Detectado!*'
 if (Config.LANG == 'RU') ldc = '*Ссылка обнаружена!*'
 if (Config.LANG == 'HI') ldc = '*लिंक का पता चला!*'
 if (Config.LANG == 'ES') ldc = '*Enlace Detectado!*'
-lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+lusifar.LUSIFARCMD({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (alllink_var == 'true' && message.jid !== '9082891698-1616356915@g.us') {
         let regex1 = new RegExp('http://')
         let regex2 = new RegExp('https://')
@@ -232,7 +232,7 @@ var plk9 = ''
     }  
 
 
-lusifar.addCommand({on: 'text', fromMe: false,onlyGroup: true, deleteCommand: false}, (async (message, match) => {
+lusifar.LUSIFARCMD({on: 'text', fromMe: false,onlyGroup: true, deleteCommand: false}, (async (message, match) => {
    if (AI_var == 'group' && message.jid !== '919562803423-1627735504@g.us') {
     
         let regex1 = new RegExp('command ')
@@ -319,7 +319,7 @@ var plk9 = ''
     }  
 
 
-lusifar.addCommand({on: 'text', fromMe: false,onlyPm:true , deleteCommand: false}, (async (message, match) => {
+lusifar.LUSIFARCMD({on: 'text', fromMe: false,onlyPm:true , deleteCommand: false}, (async (message, match) => {
    if (AI_var == 'pm' && message.jid !== '919562803423-1627735504@g.us') {
     
         let regex1 = new RegExp('command ')
@@ -406,7 +406,7 @@ var plk9 = ''
     }  
 
 
-lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+lusifar.LUSIFARCMD({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
    if (AI_var == 'both' && message.jid !== '919562803423-1627735504@g.us') {
     
         let regex1 = new RegExp('command ')

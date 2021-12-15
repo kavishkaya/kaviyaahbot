@@ -26,7 +26,7 @@ const nobs = "no"
 
 if (cn.WORKTYPE == 'private') {
 
-    lusifar.addCommand({ pattern: 'pinsta ?(.*)', fromMe: false, desc: 'instagram profile' }, async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'pinsta ?(.*)', fromMe: false, desc: 'instagram profile' }, async (message, match) => {
 
         const userName = match[1]
 
@@ -53,7 +53,7 @@ if (cn.WORKTYPE == 'private') {
 
 else if (cn.WORKTYPE == 'public') {
 
-    lusifar.addCommand({ pattern: 'pinsta ?(.*)', fromMe: false, desc: 'instagram profile' }, async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'pinsta ?(.*)', fromMe: false, desc: 'instagram profile' }, async (message, match) => {
 
         const userName = match[1]
 

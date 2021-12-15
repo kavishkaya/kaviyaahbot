@@ -27,7 +27,7 @@ let KSK = config.WORKTYPE == 'public' ? false : true
 
 //with info
 if (config.YT_INFO == 'true') {
-    lusifar.addCommand({ pattern: 'video ?(.*)', fromMe: KSK, deleteCommand: false, desc:'video download',  deleteCommand: false}, async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'video ?(.*)', fromMe: KSK, deleteCommand: false, desc:'video download',  deleteCommand: false}, async (message, match) => {
         const linkk = match[1]
         if (!linkk) return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text)
         
@@ -48,7 +48,7 @@ if (config.YT_INFO == 'true') {
       },
     )
 
-    lusifar.addCommand({ pattern: 'video ?(.*)', fromMe: false, deleteCommand: false, desc:'video download',  deleteCommand: false}, async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'video ?(.*)', fromMe: false, deleteCommand: false, desc:'video download',  deleteCommand: false}, async (message, match) => {
         const linkk = match[1]
         if (!linkk) return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text)
         await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quoted: message.data});
@@ -74,7 +74,7 @@ if (config.YT_INFO == 'true') {
 //info without
 if (config.YT_INFO == 'false') {
 
-    lusifar.addCommand({ pattern: 'video ?(.*)', fromMe: KSK, deleteCommand: false, dontAddCommandList:true,  deleteCommand: false}, async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'video ?(.*)', fromMe: KSK, deleteCommand: false, dontAddCommandList:true,  deleteCommand: false}, async (message, match) => {
         const linkk = match[1]
         if (!linkk) return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text)
         await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quoted: message.data});
@@ -102,7 +102,7 @@ if (config.YT_INFO == 'false') {
 
  //with info
 if (config.YT_INFO == 'true') {
-    lusifar.addCommand({ pattern: 'video ?(.*)', fromMe: true, deleteCommand: false, desc:'video download',  deleteCommand: false}, async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'video ?(.*)', fromMe: true, deleteCommand: false, desc:'video download',  deleteCommand: false}, async (message, match) => {
         const linkk = match[1]
         if (!linkk) return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text)
         
@@ -123,7 +123,7 @@ if (config.YT_INFO == 'true') {
       },
     )
 
-    lusifar.addCommand({ pattern: 'video ?(.*)', fromMe: true, deleteCommand: false, desc:'video download',  deleteCommand: false}, async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'video ?(.*)', fromMe: true, deleteCommand: false, desc:'video download',  deleteCommand: false}, async (message, match) => {
         const linkk = match[1]
         if (!linkk) return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text)
         await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quoted: message.data});
@@ -149,7 +149,7 @@ if (config.YT_INFO == 'true') {
 //info without
 if (config.YT_INFO == 'false') {
 
-    lusifar.addCommand({ pattern: 'video ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList:true,  deleteCommand: false}, async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'video ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList:true,  deleteCommand: false}, async (message, match) => {
         const linkk = match[1]
         if (!linkk) return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text)
         await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quoted: message.data});
@@ -194,7 +194,7 @@ let KSK = config.WORKTYPE == 'public' ? false : true
 
 
 //public mode
-    lusifar.addCommand({pattern: 'video ?(.*)', fromMe: KSK, desc: YTV_DESC}, (async (message, match) => { 
+    lusifar.LUSIFARCMD({pattern: 'video ?(.*)', fromMe: KSK, desc: YTV_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text , {quoted: message.data});    
         if (match[1].includes( 'shorts' )){
@@ -260,7 +260,7 @@ if (match[1].includes( 'shorts' )) {
 
 //in public for me 
 
- lusifar.addCommand({pattern: 'video ?(.*)', fromMe: PUBH, desc: YTV_DESC}, (async (message, match) => { 
+ lusifar.LUSIFARCMD({pattern: 'video ?(.*)', fromMe: PUBH, desc: YTV_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text , {quoted: message.data});    
         if (match[1].includes( 'shorts' )){

@@ -7,7 +7,7 @@ const Lang = Language.getString('aiscanner');
 const pb = require('../config');
 
 if (pb.WORKTYPE == 'private') {
-    lusifar.addCommand({ pattern: '.', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: '.', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
         if(message.fromMe) return
         let command = [ 
         'xmedia',
@@ -181,7 +181,7 @@ if (pb.WORKTYPE == 'private') {
     }));
 }
 else if (pb.WORKTYPE == 'public') {
-    lusifar.addCommand({ pattern: '.', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: '.', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
         if(message.fromMe) return
         let command = [ 
         'xmedia',
@@ -353,7 +353,7 @@ else if (pb.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid, msg + sml, MessageType.text)
 
     }));
-    lusifar.addCommand({ pattern: '.', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: '.', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
         if(message.fromMe) return
         let command = [ 
         'xmedia',

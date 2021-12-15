@@ -13,7 +13,7 @@ const WAME_DESC = "Get a link to the user chat."
 const WAME = "```Chat link from```@{}: https://wa.me/{}"
 const NEED_UWONG = "*Give me a user!*"
     
-    lusifar.addCommand({pattern: 'wame ?(.*)', fromMe: false, desc: WAME_DESC}, (async (message, match) => {    
+    lusifar.LUSIFARCMD({pattern: 'wame ?(.*)', fromMe: false, desc: WAME_DESC}, (async (message, match) => {    
         if (message.reply_message !== false) {
             await message.client.sendMessage(message.jid, WAME.format(message.reply_message.jid.split('@')[0], message.reply_message.jid.replace('@s.whatsapp.net', ' ')), MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
@@ -28,7 +28,7 @@ const NEED_UWONG = "*Give me a user!*"
             await message.client.sendMessage(message.jid, NEED_UWONG, MessageType.text);
         }
     }));
-lusifar.addCommand({pattern: 'wame ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+lusifar.LUSIFARCMD({pattern: 'wame ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message !== false) {
             await message.client.sendMessage(message.jid, WAME.format(message.reply_message.jid.split('@')[0], message.reply_message.jid.replace('@s.whatsapp.net', ' ')), MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}

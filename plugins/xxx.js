@@ -14,7 +14,7 @@ const YTV_UP = "*🚀Uploading Your Video...*"
 const NO_RESULT = "*🌀can't Find Anything...*"
 const tk = Config.WORKTYPE == 'public' ? false : true
 
-    lusifar.addCommand({ pattern: 'video ?(.*)', fromMe: tk, deleteCommand: false, desc: "Download videos",  deleteCommand: false}, async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'video ?(.*)', fromMe: tk, deleteCommand: false, desc: "Download videos",  deleteCommand: false}, async (message, match) => {
         const linkk = match[1]
         if (!linkk) return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text)
         await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text ,  {quoted: message.data});
@@ -33,7 +33,7 @@ const tk = Config.WORKTYPE == 'public' ? false : true
         )
       },
     )
-    lusifar.addCommand({ pattern: 'video ?(.*)', fromMe: true, deleteCommand: false, desc: "Download videos",  deleteCommand: false}, async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'video ?(.*)', fromMe: true, deleteCommand: false, desc: "Download videos",  deleteCommand: false}, async (message, match) => {
         const linkk = match[1]
         if (!linkk) return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text)
         await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text ,  {quoted: message.data});

@@ -38,7 +38,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
     }
 
    
-    lusifar.addCommand({pattern: 'antibadword ?(.*)', fromMe: true, desc: l_dsc, usage: '.antibadword on / off' }, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'antibadword ?(.*)', fromMe: true, desc: l_dsc, usage: '.antibadword on / off' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 

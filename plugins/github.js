@@ -33,7 +33,7 @@ const NOT_FOUND = "*Can't Find Anything!.*"
 
 if (Config.WORKTYPE == 'private') {
 
-tenu.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC}, async (message, match) => {
+tenu.LUSIFARCMD({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC}, async (message, match) => {
 
     const pname = match[1]
 
@@ -90,7 +90,7 @@ tenu.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DES
 
 if (Config.WORKTYPE == 'public') {
 
-tenu.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC}, async (message, match) => {
+tenu.LUSIFARCMD({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC}, async (message, match) => {
 
     const pname = match[1]
 

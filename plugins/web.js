@@ -63,7 +63,7 @@ function similarity(comm, wr) {
   }
   return (longerLength - editDistance(longer, shorter)) / parseFloat(longerLength);
 }
-lusifar.addCommand({pattern: '?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: '?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
     var HANDLER = '';
     if (/\[(\W*)\]/.test(Config.HANDLERS)) {
         HANDLER = Config.HANDLERS.match(/\[(\W*)\]/)[1][0];
@@ -377,7 +377,7 @@ function speedText(speed) {
     return `${bits.toFixed(places[unit])} ${units[unit]}bps`;
 }
 
-lusifar.addCommand({pattern: 'speedtest', fromMe: true, desc: Lang.SPEEDTEST_DESC}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'speedtest', fromMe: true, desc: Lang.SPEEDTEST_DESC}, (async (message, match) => {
     var msg = await message.reply(Lang.SPEEDTESTING);
     var st = await speedTest({acceptLicense: true, acceptGdpr: true});
     
@@ -391,7 +391,7 @@ lusifar.addCommand({pattern: 'speedtest', fromMe: true, desc: Lang.SPEEDTEST_DES
     await msg.delete();
 }));
 
-lusifar.addCommand({pattern: 'ping$', fromMe: true, deleteCommand: false, desc: Lang.PING_DESC}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'ping$', fromMe: true, deleteCommand: false, desc: Lang.PING_DESC}, (async (message, match) => {
   var start = new Date().getTime();
   await message.sendMessage('```Ping!```');
   var end = new Date().getTime();
@@ -402,7 +402,7 @@ lusifar.addCommand({pattern: 'ping$', fromMe: true, deleteCommand: false, desc: 
 
 if (Config.WORKTYPE == 'private') {
 
-    lusifar.addCommand({pattern: 'short ?(.*)', fromMe: true, desc: Lang.URL}, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'short ?(.*)', fromMe: true, desc: Lang.URL}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid, SLang.LİNK, MessageType.text);
 
@@ -413,7 +413,7 @@ if (Config.WORKTYPE == 'private') {
             await message.client.sendMessage(message.jid,`*Original Link:* ${match[1]}\n*Short Link:* ` + res, MessageType.text)
         });
     }));
-    lusifar.addCommand({pattern: 'calc ?(.*)', fromMe: true, desc: Lang.CALC }, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'calc ?(.*)', fromMe: true, desc: Lang.CALC }, (async (message, match) => {
         if (match[1].length < 4) { return await message.client.sendMessage(message.jid,Lang.VALİD, MessageType.text) }
         if (match[1].includes('+')) { var split = match[1].split('+'), sonsayi = split[1], ilksayi = split[0]
             var result = -(-ilksayi - sonsayi)
@@ -443,7 +443,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    lusifar.addCommand({pattern: 'short ?(.*)', fromMe: false, desc: Lang.URL}, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'short ?(.*)', fromMe: false, desc: Lang.URL}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid, SLang.LİNK, MessageType.text);
 
@@ -454,7 +454,7 @@ else if (Config.WORKTYPE == 'public') {
             await message.client.sendMessage(message.jid,`*Original Link:* ${match[1]}\n*Short Link:* ` + res, MessageType.text)
         });
     }));
-    lusifar.addCommand({pattern: 'calc ?(.*)', fromMe: false, desc: Lang.CALC }, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'calc ?(.*)', fromMe: false, desc: Lang.CALC }, (async (message, match) => {
         if (match[1].length < 4) { return await message.client.sendMessage(message.jid,Lang.VALİD, MessageType.text) }
         if (match[1].includes('+')) { var split = match[1].split('+'), sonsayi = split[1], ilksayi = split[0]
             var result = -(-ilksayi - sonsayi)

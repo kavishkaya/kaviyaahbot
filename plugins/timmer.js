@@ -11,7 +11,7 @@ const axios = require('axios');
 const hrs = new Date().getHours({ timeZone: Config.TIME_ZONE })
 const sks = Config.WORKTYPE == 'public' ? false : true
 const TT = 'Show timet'
-lusifar.addCommand({pattern: 'XCX', fromMe: sks, desc: TT}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'XCX', fromMe: sks, desc: TT}, (async (message, match) => {
     var time = new Date().toLocaleString('SI', { timeZone: Config.TIME_ZONE }).split(' ')[1]
 
     var wish = ''

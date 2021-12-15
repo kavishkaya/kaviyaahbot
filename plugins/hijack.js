@@ -47,7 +47,7 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 
-lusifar.addCommand({pattern: 'endspam', fromMe: false, desc: 'High Power Full SPAM.... Turn off command'}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'endspam', fromMe: false, desc: 'High Power Full SPAM.... Turn off command'}, (async (message, match) => {
 
     await message.client.sendMessage(message.jid, 'Spam successfully Stoped😈', MessageType.text);
 
@@ -58,7 +58,7 @@ lusifar.addCommand({pattern: 'endspam', fromMe: false, desc: 'High Power Full SP
     });
 }));
 
-lusifar.addCommand({pattern: 'endspam', fromMe: true, desc: 'High Power Full SPAM.... Turn off command'}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'endspam', fromMe: true, desc: 'High Power Full SPAM.... Turn off command'}, (async (message, match) => {
 
     await message.client.sendMessage(message.jid, 'Spam successfully Stoped😈', MessageType.text);
 
@@ -71,7 +71,7 @@ lusifar.addCommand({pattern: 'endspam', fromMe: true, desc: 'High Power Full SPA
 
 
 
-lusifar.addCommand({pattern: 'sendspam', fromMe: true, desc: KAVIYAAH,}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'sendspam', fromMe: true, desc: KAVIYAAH,}, (async (message, match) => {
 
   var msg = await message.reply('```Running Script....```');
   

@@ -20,7 +20,7 @@ const usage = ".brainly <Question>"
 const butuh = "```Enter the Question!```"
 
 if (Config.WORKTYPE == 'public') {
-lusifar.addCommand({ pattern: 'ask ?(.*)', fromMe: false, dontAddCommandList:true}, async (message, match) => {
+lusifar.LUSIFARCMD({ pattern: 'ask ?(.*)', fromMe: false, dontAddCommandList:true}, async (message, match) => {
 
         const Soal = match[1]
         
@@ -42,7 +42,7 @@ lusifar.addCommand({ pattern: 'ask ?(.*)', fromMe: false, dontAddCommandList:tru
     )
 }
 
-lusifar.addCommand({ pattern: 'ask ?(.*)', fromMe: true, desc: "aks questions from bot"}, async (message, match) => {
+lusifar.LUSIFARCMD({ pattern: 'ask ?(.*)', fromMe: true, desc: "aks questions from bot"}, async (message, match) => {
 
         const Soal = match[1]
         

@@ -16,7 +16,7 @@ const NO_RESULT = "*🌀can't Find Anything...*"
 
 //උස්සන්නද ආවෙ බේසිකයෝ.බොහොම අමාරුවෙන් හැදුවෙ.උස්සන එකා අවජාතකයෙක් කියල හිතාගන්න පුලුවන් පොන්න හැත්ත.හුකන පොන්නයෝ
     
-    lusifar.addCommand({ pattern: 'nosong ?(.*)', fromMe: true, deleteCommand: false, desc:'video download',  deleteCommand: false}, async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'nosong ?(.*)', fromMe: true, deleteCommand: false, desc:'video download',  deleteCommand: false}, async (message, match) => {
         const linkk = match[1]
         if (!linkk) return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text)
             await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quoted: message.data});
@@ -42,7 +42,7 @@ const NO_RESULT = "*🌀can't Find Anything...*"
       },
     )
 
-    lusifar.addCommand({ pattern: 'nosong ?(.*)', fromMe: false, deleteCommand: false, desc:'video download',  deleteCommand: false}, async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'nosong ?(.*)', fromMe: false, deleteCommand: false, desc:'video download',  deleteCommand: false}, async (message, match) => {
         const linkk = match[1]
         if (!linkk) return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text)
             await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quoted: message.data});

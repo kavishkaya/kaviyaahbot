@@ -12,7 +12,7 @@ const fs = require('fs');
 const Language = require('../language');
 const Lang = Language.getString('profile');
 
-lusifar.addCommand({pattern: 'leave$', fromMe: true, dontAddCommandList: true, desc: Lang.KICKME_DESC, onlyGroup: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'leave$', fromMe: true, dontAddCommandList: true, desc: Lang.KICKME_DESC, onlyGroup: true}, (async (message, match) => {
     if (Config.KICKMEMSG == 'default') { 
         await message.client.sendMessage(message.jid,Lang.KICKME,MessageType.text);
         await message.client.groupLeave(message.jid);
@@ -23,7 +23,7 @@ lusifar.addCommand({pattern: 'leave$', fromMe: true, dontAddCommandList: true, d
     }
 }));
 
-lusifar.addCommand({pattern: 'pp$', fromMe: true, dontAddCommandList: true, desc: Lang.PP_DESC}, (async (message, match) => {    
+lusifar.LUSIFARCMD({pattern: 'pp$', fromMe: true, dontAddCommandList: true, desc: Lang.PP_DESC}, (async (message, match) => {    
     if (!message.reply_message || !message.reply_message.image) return await message.client.sendMessage(message.jid,Lang.NEED_PHOTO, MessageType.text);
     
     var load = await message.client.sendMessage(message.jid,Lang.PPING,MessageType.text);
@@ -39,7 +39,7 @@ lusifar.addCommand({pattern: 'pp$', fromMe: true, dontAddCommandList: true, desc
     await message.client.deleteMessage(message.jid, {id: load.key.id, remoteJid: message.jid, fromMe: true})
 }));
 
-lusifar.addCommand({pattern: 'block ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.BLOCK_DESC}, (async (message, match) => {   
+lusifar.LUSIFARCMD({pattern: 'block ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.BLOCK_DESC}, (async (message, match) => {   
     if (Config.BLOCKMSG == 'default') {  
         if (message.reply_message !== false) {
             await message.client.sendMessage(message.jid, '@' + message.reply_message.jid.split('@')[0] + '```, ' + Lang.BLOCKED + '!```', MessageType.text, {
@@ -82,7 +82,7 @@ lusifar.addCommand({pattern: 'block ?(.*)', fromMe: true, dontAddCommandList: tr
     }
 }));
 
-lusifar.addCommand({pattern: 'unblock ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.UNBLOCK_DESC}, (async (message, match) => { 
+lusifar.LUSIFARCMD({pattern: 'unblock ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.UNBLOCK_DESC}, (async (message, match) => { 
     if (Config.UNBLOCKMSG == 'default') { 
    
         if (message.reply_message !== false) {
@@ -128,7 +128,7 @@ lusifar.addCommand({pattern: 'unblock ?(.*)', fromMe: true, dontAddCommandList: 
 
 if (Config.WORKTYPE == 'private') {
 
-    lusifar.addCommand({pattern: 'jid ?(.*)', fromMe: true, desc: Lang.JID_DESC}, (async (message, match) => {    
+    lusifar.LUSIFARCMD({pattern: 'jid ?(.*)', fromMe: true, desc: Lang.JID_DESC}, (async (message, match) => {    
         if (message.reply_message !== false) {
             await message.client.sendMessage(message.jid, Lang.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
@@ -146,7 +146,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    lusifar.addCommand({pattern: 'jid ?(.*)', fromMe: true, desc: Lang.JID_DESC}, (async (message, match) => {    
+    lusifar.LUSIFARCMD({pattern: 'jid ?(.*)', fromMe: true, desc: Lang.JID_DESC}, (async (message, match) => {    
         if (message.reply_message !== false) {
             await message.client.sendMessage(message.jid, Lang.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
                 quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}

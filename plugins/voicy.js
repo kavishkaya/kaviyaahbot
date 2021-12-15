@@ -43,7 +43,7 @@ const convertToWav = file => {
 
 if (conf.WORKTYPE == 'private') {
 
-    lusifar.addCommand({ pattern: 'voicy', desc: Lang.USAGE, fromMe: true }, (async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'voicy', desc: Lang.USAGE, fromMe: true }, (async (message, match) => {
 
         try {
             if (message.reply_message) {
@@ -82,7 +82,7 @@ if (conf.WORKTYPE == 'private') {
 }
 if (conf.WORKTYPE == 'public') {
 
-    lusifar.addCommand({ pattern: 'voicy', desc: Lang.USAGE, fromMe: false }, (async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'voicy', desc: Lang.USAGE, fromMe: false }, (async (message, match) => {
 
         try {
             if (message.reply_message) {

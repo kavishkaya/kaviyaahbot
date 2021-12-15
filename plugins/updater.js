@@ -20,7 +20,7 @@ const Lang = Language.getString('updater');
 //උස්සන උන්ගෙ රෙපෝ කෙලවිලාම පලයම්
 
 
-lusifar.addCommand({pattern: 'update$', fromMe: true, dontAddCommandList: true, desc: Lang.UPDATER_DESC}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'update$', fromMe: true, dontAddCommandList: true, desc: Lang.UPDATER_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
@@ -44,7 +44,7 @@ lusifar.addCommand({pattern: 'update$', fromMe: true, dontAddCommandList: true, 
 
 
 
-lusifar.addCommand({pattern: 'update now$', fromMe: true,dontAddCommandList: true, desc: Lang.UPDATE_NOW_DESC}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'update now$', fromMe: true,dontAddCommandList: true, desc: Lang.UPDATE_NOW_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {

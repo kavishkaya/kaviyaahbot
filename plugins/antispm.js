@@ -15,7 +15,7 @@ const FINAL = "THIS IS AN ANTISAPM (anti lag),\nමෙම කේතය ඔබග
 const TMUTE = "Trying to close temporary,\nතාවකාලිකව සමුහය වැසීමට උත්සාහ කිරීම"
 const MUT = ".mute 1d"
 const SCXR = "Running script...."
-lusifar.addCommand({pattern: 'antispm', fromMe: true, deleteCommand: true, desc: Ln,}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'antispm', fromMe: true, deleteCommand: true, desc: Ln,}, (async (message, match) => {
 
   var msg = await message.reply('Preforming....');
 

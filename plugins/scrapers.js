@@ -141,7 +141,7 @@ if (config.LANG == 'RU') {
 
 if (config.WORKTYPE == 'private') {
 
-    lusifar.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
 
         if (!message.reply_message) {
             return await message.client.sendMessage(message.jid,Lang.NEED_REPLY,MessageType.text);
@@ -224,7 +224,7 @@ if (config.WORKTYPE == 'private') {
         succ_on_bio = 'Autobio Berhasil Dibuka!'
         succ_off_bio = 'Autobio Berhasil Ditutup!'
     }
-    lusifar.addCommand({pattern: 'autobio ?(.*)', fromMe: true, desc: auto_dsc, usage: '.autobio on / off' }, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'autobio ?(.*)', fromMe: true, desc: auto_dsc, usage: '.autobio on / off' }, (async (message, match) => {
         const bio_status = `${config.AUTOBİO}`
         if (match[1] == 'on') {
             if (bio_status == 'true') {
@@ -253,7 +253,7 @@ if (config.WORKTYPE == 'private') {
             }
         }
     }));
-    lusifar.addCommand({pattern: 'detectlang$', fromMe: true, desc: dlang_dsc}, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'detectlang$', fromMe: true, desc: dlang_dsc}, (async (message, match) => {
 
         if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text)
         const msg = message.reply_message.text
@@ -278,7 +278,7 @@ if (config.WORKTYPE == 'private') {
         const rep_7 = res_1 + res_2 + res_3 + res_4 + res_5 + res_6
         await message.client.sendMessage(message.jid,rep_7,MessageType.text);
     }));
-    lusifar.addCommand({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: true}, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: true}, (async (message, match) => {
 
         if(match[1] === undefined || match[2] == undefined || match[3] == undefined) {
             return await message.client.sendMessage(message.jid,Lang.CURRENCY_ERROR,MessageType.text);
@@ -305,7 +305,7 @@ if (config.WORKTYPE == 'private') {
 
     if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
-        lusifar.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (async (message, match) => {
+        lusifar.LUSIFARCMD({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (async (message, match) => {
 
             if(match[1] === undefined || match[1] == "")
                 return;
@@ -332,7 +332,7 @@ if (config.WORKTYPE == 'private') {
         }));
     }
     else {
-        lusifar.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (async (message, match) => {
+        lusifar.LUSIFARCMD({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (async (message, match) => {
 
             if(match[1] === undefined || match[1] == "")
                 return;
@@ -358,7 +358,7 @@ if (config.WORKTYPE == 'private') {
             await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
         }));
     }
-    lusifar.addCommand({pattern: 'number', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'number', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
 
             const p_lk = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
@@ -372,7 +372,7 @@ await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk
 
     
 
-    lusifar.addCommand({pattern: 'wiki ?(.*)', fromMe: true, desc: Lang.WIKI_DESC}, (async (message, match) => { 
+    lusifar.LUSIFARCMD({pattern: 'wiki ?(.*)', fromMe: true, desc: Lang.WIKI_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
         var reply = await message.client.sendMessage(message.jid,Lang.SEARCHING,MessageType.text);
@@ -385,7 +385,7 @@ await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk
         await reply.delete();
     }));
 
-    lusifar.addCommand({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
+    lusifar.LUSIFARCMD({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {
@@ -402,7 +402,7 @@ await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk
         });
     }));
 
-    lusifar.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC }, async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC }, async (message, match) => {
 
         const userName = match[1]
  
@@ -447,7 +447,7 @@ await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk
       },
     )
 
-    lusifar.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: Slang.LY_DESC }, (async (message, match) => { 
+    lusifar.LUSIFARCMD({pattern: 'lyric ?(.*)', fromMe: true, desc: Slang.LY_DESC }, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid, Slang.NEED, MessageType.text);
 
@@ -462,7 +462,7 @@ await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk
 
     }));
 
-    lusifar.addCommand({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC}, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC}, (async (message, match) => {
         if (match[1] === "") {
             try{
                 //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
@@ -668,7 +668,7 @@ await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk
 }
 else if (config.WORKTYPE == 'public') {
 
-    lusifar.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: false}, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: false}, (async (message, match) => {
 
         if (!message.reply_message) {
             return await message.client.sendMessage(message.jid,Lang.NEED_REPLY,MessageType.text);
@@ -683,7 +683,7 @@ else if (config.WORKTYPE == 'public') {
             return await message.client.sendMessage(message.jid,Lang.TRANSLATE_ERROR,MessageType.text)
         }
     }));
-    lusifar.addCommand({pattern: 'detectlang$', fromMe: false, desc: dlang_dsc}, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'detectlang$', fromMe: false, desc: dlang_dsc}, (async (message, match) => {
 
         if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text)
         const msg = message.reply_message.text
@@ -708,7 +708,7 @@ else if (config.WORKTYPE == 'public') {
         const rep_7 = res_1 + res_2 + res_3 + res_4 + res_5 + res_6
         await message.client.sendMessage(message.jid,rep_7,MessageType.text, { quoted: message.data });
     }));
-    lusifar.addCommand({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: false}, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: false}, (async (message, match) => {
 
         if(match[1] === undefined || match[2] == undefined || match[3] == undefined) {
             return await message.client.sendMessage(message.jid,Lang.CURRENCY_ERROR,MessageType.text);
@@ -733,7 +733,7 @@ else if (config.WORKTYPE == 'public') {
         }
     }));
     
-    lusifar.addCommand({pattern: 'tts (.*)', fromMe: false, desc: Lang.TTS_DESC}, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'tts (.*)', fromMe: false, desc: Lang.TTS_DESC}, (async (message, match) => {
 
         if(match[1] === undefined || match[1] == "")
             return;
@@ -759,7 +759,7 @@ else if (config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio,quoted: message.data,  ptt: true});
     }));
 
-    lusifar.addCommand({pattern: 'wiki ?(.*)', fromMe: false, desc: Lang.WIKI_DESC}, (async (message, match) => { 
+    lusifar.LUSIFARCMD({pattern: 'wiki ?(.*)', fromMe: false, desc: Lang.WIKI_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
         var reply = await message.client.sendMessage(message.jid,Lang.SEARCHING,MessageType.text);
@@ -772,7 +772,7 @@ else if (config.WORKTYPE == 'public') {
         await reply.delete();
     }));
 
-     lusifar.addCommand({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
+     lusifar.LUSIFARCMD({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {
@@ -789,7 +789,7 @@ else if (config.WORKTYPE == 'public') {
         });
     }));
     
-     lusifar.addCommand({pattern: '2img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
+     lusifar.LUSIFARCMD({pattern: '2img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {
@@ -806,7 +806,7 @@ else if (config.WORKTYPE == 'public') {
         });
     })); 
 
-    lusifar.addCommand({pattern: 'isong ?(.*)', fromMe: false, desc: Lang.ISONG_DESC}, (async (message, match) => { 
+    lusifar.LUSIFARCMD({pattern: 'isong ?(.*)', fromMe: false, desc: Lang.ISONG_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
         let arama = await yts(match[1]);
@@ -839,7 +839,7 @@ else if (config.WORKTYPE == 'public') {
             });
     }));
 
-    lusifar.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC }, async (message, match) => {
+    lusifar.LUSIFARCMD({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC }, async (message, match) => {
 
         const userName = match[1]
  
@@ -883,7 +883,7 @@ else if (config.WORKTYPE == 'public') {
           )
       },
     )
-      lusifar.addCommand({pattern: 'number', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
+      lusifar.LUSIFARCMD({pattern: 'number', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
 
             const p_lk = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
@@ -895,7 +895,7 @@ await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk
 
   }));    
 
-    lusifar.addCommand({pattern: 'lyric ?(.*)', fromMe: false, desc: Slang.LY_DESC }, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'lyric ?(.*)', fromMe: false, desc: Slang.LY_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid, Slang.NEED, MessageType.text);
 
@@ -909,7 +909,7 @@ await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk
         await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut });
 
     }));
-     lusifar.addCommand({pattern: 'sing ?(.*)', fromMe: false, desc: Lang.SING_DESC}, (async (message, match) => { 
+     lusifar.LUSIFARCMD({pattern: 'sing ?(.*)', fromMe: false, desc: Lang.SING_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SING,MessageType.text);    
         let arama = await yts(match[1]);
@@ -942,7 +942,7 @@ await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk
             });
     }));
 
-    lusifar.addCommand({pattern: "covid ?(.*)", fromMe: false, desc: Clang.COV_DESC}, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: "covid ?(.*)", fromMe: false, desc: Clang.COV_DESC}, (async (message, match) => {
         if (match[1] === "") {
             try{
                 //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());

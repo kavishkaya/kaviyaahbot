@@ -31,7 +31,7 @@ var LANG = {
             limit: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Bu Plugin Güvenlik Sınırını Aşıyor!*\n*Zararlılık Yüzdesi:* _%' : '*This Plugin Exceeds Security Limit!*\n*Percentage of Harm:* _%',
             imside: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Varolan Pluginleri Tekrar Yükleyemezsin!*' : '*You Cant Reinstall Existing Plugins!*'
 };
-lusifar.addCommand({pattern: 'pkg ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'pkg ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] == '') return await message.client.sendMessage(message.jid,Lang.NEED_URL + '.install https://gist.github.com/phaticusthiccy/4232b1c8c4734e1f06c3d991149c6fbd', MessageType.text)
     try {
@@ -48,7 +48,7 @@ lusifar.addCommand({pattern: 'pkg ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC,
     var response = await got(url);
     if (response.statusCode == 200) {
         // Plugin Name
-        var plugin_name = response.body.match(/addCommand\({.*pattern: ["'](.*)["'].*}/);
+        var plugin_name = response.body.match(/LUSIFARCMD\({.*pattern: ["'](.*)["'].*}/);
         if (plugin_name.length >= 1) {
             plugin_name = "__" + plugin_name[1];
         } else {
@@ -129,7 +129,7 @@ lusifar.addCommand({pattern: 'pkg ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC,
     }
 }));
 
-lusifar.addCommand({pattern: 'plugin$', fromMe: true, dontAddCommandList: true, desc: Lang.PLUGIN_DESC}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'plugin$', fromMe: true, dontAddCommandList: true, desc: Lang.PLUGIN_DESC}, (async (message, match) => {
     var mesaj = Lang.INSTALLED_FROM_REMOTE;
     var plugins = await Db.PluginDB.findAll();
     if (plugins.length < 1) {
@@ -145,7 +145,7 @@ lusifar.addCommand({pattern: 'plugin$', fromMe: true, dontAddCommandList: true, 
     }
 }));
 
-lusifar.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'remove(?: |$)(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.NEED_PLUGIN);
     if (!match[1].startsWith('__')) match[1] = '__' + match[1];
     try {

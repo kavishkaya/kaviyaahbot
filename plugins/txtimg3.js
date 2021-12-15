@@ -13,7 +13,7 @@ let am = Config.WORKTYPE == 'public' ? false : true
 const EFFECT_DESC = "Text effective රූප බවට පරිවර්තනය කිරීම සඳහා විධාන කට්ටලයක්."
 const NEED_WORD = "*ඔබ වචනයක් ඇතුළත් කළ යුතුය*"
 
-lusifar.addCommand({pattern: 'glitch ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'glitch ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -30,7 +30,7 @@ lusifar.addCommand({pattern: 'glitch ?(.*)', fromMe: am, dontAddCommandList: tru
 
     }));
 
- lusifar.addCommand({pattern: 'freefire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+ lusifar.LUSIFARCMD({pattern: 'freefire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -40,7 +40,7 @@ lusifar.addCommand({pattern: 'glitch ?(.*)', fromMe: am, dontAddCommandList: tru
 
     }));
 
-lusifar.addCommand({pattern: 'cfire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'cfire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -50,7 +50,7 @@ lusifar.addCommand({pattern: 'cfire ?(.*)', fromMe: am, dontAddCommandList: true
   
       }));
 
-lusifar.addCommand({pattern: 'light ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'light ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     
@@ -60,7 +60,7 @@ lusifar.addCommand({pattern: 'light ?(.*)', fromMe: am, dontAddCommandList: true
     
     }));
 
-lusifar.addCommand({pattern: 'cslogo ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'cslogo ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -70,7 +70,7 @@ lusifar.addCommand({pattern: 'cslogo ?(.*)', fromMe: am, dontAddCommandList: tru
   
     }));
 
-lusifar.addCommand({pattern: 's3d ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 's3d ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -80,7 +80,7 @@ lusifar.addCommand({pattern: 's3d ?(.*)', fromMe: am, dontAddCommandList: true},
 
     }));
 
-lusifar.addCommand({ pattern: 'nlogo ?(.*)', fromMe: am,dontAddCommandList: true }, (async (message, match) => {
+lusifar.LUSIFARCMD({ pattern: 'nlogo ?(.*)', fromMe: am,dontAddCommandList: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -90,7 +90,7 @@ lusifar.addCommand({ pattern: 'nlogo ?(.*)', fromMe: am,dontAddCommandList: true
 
     }));
 
-lusifar.addCommand({pattern: 'blackpink ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'blackpink ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -100,7 +100,7 @@ lusifar.addCommand({pattern: 'blackpink ?(.*)', fromMe: am, dontAddCommandList: 
 
     }));
 
-lusifar.addCommand({pattern: 'neonlight ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'neonlight ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -110,7 +110,7 @@ lusifar.addCommand({pattern: 'neonlight ?(.*)', fromMe: am, dontAddCommandList: 
 
     }));
 
-lusifar.addCommand({pattern: 'pornhub ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'pornhub ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -127,7 +127,7 @@ lusifar.addCommand({pattern: 'pornhub ?(.*)', fromMe: am, dontAddCommandList: tr
 
     }));
 
-lusifar.addCommand({pattern: '3dtext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: '3dtext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -137,7 +137,7 @@ lusifar.addCommand({pattern: '3dtext ?(.*)', fromMe: am, dontAddCommandList: tru
 
    }));
 
-lusifar.addCommand({pattern: 'nfire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'nfire ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -147,7 +147,7 @@ lusifar.addCommand({pattern: 'nfire ?(.*)', fromMe: am, dontAddCommandList: true
 
     }));
 
-lusifar.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'ninjalogo ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.NEED_WORD);
 
@@ -157,7 +157,7 @@ lusifar.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: am, dontAddCommandList: 
 
     }));
 
-lusifar.addCommand({pattern: 'nglow ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'nglow ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -167,7 +167,7 @@ lusifar.addCommand({pattern: 'nglow ?(.*)', fromMe: am, dontAddCommandList: true
 
     }));
 
-lusifar.addCommand({pattern: 'nleaves ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'nleaves ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -177,7 +177,7 @@ lusifar.addCommand({pattern: 'nleaves ?(.*)', fromMe: am, dontAddCommandList: tr
 
     }));
 
-lusifar.addCommand({pattern: 'nsky ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'nsky ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -187,7 +187,7 @@ lusifar.addCommand({pattern: 'nsky ?(.*)', fromMe: am, dontAddCommandList: true}
 
     }));
 
-lusifar.addCommand({pattern: 'buttonyt ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'buttonyt ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -197,7 +197,7 @@ lusifar.addCommand({pattern: 'buttonyt ?(.*)', fromMe: am, dontAddCommandList: t
 
     }));
 
-lusifar.addCommand({pattern: 'bcwall ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'bcwall ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -207,7 +207,7 @@ lusifar.addCommand({pattern: 'bcwall ?(.*)', fromMe: am, dontAddCommandList: tru
 
     }));
 
-lusifar.addCommand({pattern: 'vtext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'vtext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -217,7 +217,7 @@ lusifar.addCommand({pattern: 'vtext ?(.*)', fromMe: am, dontAddCommandList: true
 
     }));
 
-    lusifar.addCommand({pattern: 'ptext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'ptext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -227,7 +227,7 @@ lusifar.addCommand({pattern: 'vtext ?(.*)', fromMe: am, dontAddCommandList: true
 
     }));
 
-    lusifar.addCommand({pattern: 'colortext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+    lusifar.LUSIFARCMD({pattern: 'colortext ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -237,7 +237,7 @@ lusifar.addCommand({pattern: 'vtext ?(.*)', fromMe: am, dontAddCommandList: true
 
     }));
 
-lusifar.addCommand({pattern: 'emoji ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
+lusifar.LUSIFARCMD({pattern: 'emoji ?(.*)', fromMe: am, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
         

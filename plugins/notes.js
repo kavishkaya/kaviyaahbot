@@ -17,7 +17,7 @@ const NotesDB = require('./sql/notes');
 const Language = require('../language')
 const Lang = Language.getString('notes')
 
-lusifar.addCommand({ pattern: 'notes', fromMe: true, desc: Lang.NOTES_USAGE }, async (message, match) => {
+lusifar.LUSIFARCMD({ pattern: 'notes', fromMe: true, desc: Lang.NOTES_USAGE }, async (message, match) => {
 
 
     const _notes = await NotesDB.getNotes()
@@ -46,7 +46,7 @@ lusifar.addCommand({ pattern: 'notes', fromMe: true, desc: Lang.NOTES_USAGE }, a
 
 
 
-lusifar.addCommand({ pattern: 'save ?(.*)', fromMe: true, desc: Lang.SAVE_USAGE }, async (message, match) => {
+lusifar.LUSIFARCMD({ pattern: 'save ?(.*)', fromMe: true, desc: Lang.SAVE_USAGE }, async (message, match) => {
 
     const userNote = match[1]
 
@@ -94,7 +94,7 @@ lusifar.addCommand({ pattern: 'save ?(.*)', fromMe: true, desc: Lang.SAVE_USAGE 
     }
 })
 
-lusifar.addCommand({ pattern: 'deleteNotes', fromMe: true, desc: Lang.DELETE_USAGE }, async (message, match) => {
+lusifar.LUSIFARCMD({ pattern: 'deleteNotes', fromMe: true, desc: Lang.DELETE_USAGE }, async (message, match) => {
 
     await NotesDB.deleteAllNotes()
 

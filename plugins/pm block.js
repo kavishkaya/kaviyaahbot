@@ -45,7 +45,7 @@ if (Config.LANG == 'SI') plk = 'මේ චැට් කරන්න වෙලා
 if (Config.LANG == 'SI') plk2 = '.block'
 if (Config.LANG == 'ML') plk = 'ക്ഷമിക്കണം PM ൽ ചാറ്റിംഗ് അനുവദനീയമല്ല'
 if (Config.LANG == 'ML') plk2 = '.block'
-lusifar.addCommand({on: 'text', fromMe: false, onlyPm: true , deleteCommand: false}, (async (message, match) => {
+lusifar.LUSIFARCMD({on: 'text', fromMe: false, onlyPm: true , deleteCommand: false}, (async (message, match) => {
     if (pmblock_var == 'true' && message.jid !== '919072790587@s.whatsapp.net') {
         let regex1 = anything
         if (!regex1.test(message.message)) {

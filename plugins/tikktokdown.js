@@ -15,7 +15,7 @@ let Kaviyaah = Config.WORKTYPE == 'public' ? false : true
 let btmy = Config.WORKTYPE == 'public' ? true : false
 
 	
-lusifar.addCommand({ pattern: 'tiktok ?(.*)', fromMe: Kaviyaah, desc: "downloading tik tok videos"}, async (message, match) => {
+lusifar.LUSIFARCMD({ pattern: 'tiktok ?(.*)', fromMe: Kaviyaah, desc: "downloading tik tok videos"}, async (message, match) => {
 
     const link = match[1]
 
@@ -44,7 +44,7 @@ lusifar.addCommand({ pattern: 'tiktok ?(.*)', fromMe: Kaviyaah, desc: "downloadi
 					
 }) //pattern close
   
-lusifar.addCommand({ pattern: 'tiktok ?(.*)', fromMe: btmy, desc: "downloading tik tok videos"}, async (message, match) => {
+lusifar.LUSIFARCMD({ pattern: 'tiktok ?(.*)', fromMe: btmy, desc: "downloading tik tok videos"}, async (message, match) => {
 
     const link = match[1]
 

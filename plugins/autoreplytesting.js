@@ -61,7 +61,7 @@ const KKK16 = "සුබ රාත්‍රියක්"
 const KKK17 = "බැ නම් කමක් නෑ"
 const KKK18 = "බායි"
 
-lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+lusifar.LUSIFARCMD({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (autoreply_var == 'true' && message.jid !== '905511384572-1616356915@g.us') {
         let regex01 = new RegExp('hi')
         let regex02 = new RegExp('HI')
